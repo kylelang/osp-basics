@@ -1,0 +1,84 @@
+---
+title: "Order of Operations"
+---
+
+## PEMDAS in R
+
+When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical
+operation according to the usual PEMDAS ordering (**P**arentheses, **E**xponents, **M**ultiplication/**D**ivision,
+**A**ddition/**S**ubtraction).
+
+```{r, echo = FALSE, include = FALSE}
+## Define these objects so the static (knitr) chunks below can use them.
+x <- 2.5
+y <- 7
+z <- 5
+```
+
+```{webr-r}
+#| context: "setup"
+
+x <- 2.5
+y <- 7
+z <- 5
+```
+
+**Do:** run both lines below and compare the results.
+
+```{webr-r}
+y + x / z
+(y + x) / z
+```
+
+**See:** the two lines produce different answers, even though they use the same three numbers and the same three
+operators.
+
+**Explain:**
+
+- In the first line, R first divides `x` by `z`, and *then* adds `y` to the result.
+- In the second line, the parentheses force R to first add `x` to `y`, and only *then* divide the result by `z`.
+
+Parentheses are your most reliable tool for controlling order of operations. When in doubt, add parentheses. They never hurt, and they make your intent explicit both to R and to anyone (including future-you) reading the code.
+
+::: practice
+
+## Practice
+
+Why do the following two expressions produce different answers? Before running anything, write down what each line is asking R to compute, step by step.
+
+:::: {.panel-tabset}
+## {{< var tab_title.question >}}
+
+```{r}
+y^(1/2)
+y^1/2
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+y^(1/2)
+sqrt(y)
+```
+In the first case, we're raising `y` to the power of $\frac{1}{2}$ — which is the same as taking a square root.
+
+```{r}
+y^1/2
+y/2
+```
+In the second case, R applies the exponent (`^`) *before* the division, so it first raises `y` to the power of `1`
+(which does nothing) and only then divides the result by `2`. The exponent operator has higher precedence than
+division, so it's applied first even though it appears "attached" to the `1` rather than the whole expression.
+::::
+
+:::
+
+## Quick Check
+
+- If you wanted `y` raised to the power of `1/2`, which version is correct: `y^(1/2)` or `y^1/2`?
+- What single change would make `y^1/2` compute the same thing as `y^(1/2)`?
+
+Try both in the editor below to confirm your reasoning.
+
+```{webr-r}
+```

@@ -1,0 +1,125 @@
+---
+title: "Objects (Assignment)"
+---
+
+## Why Do We Need Objects?
+
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 2.3: Object Names](https://r4ds.hadley.nz/workflow-basics.html#sec-whats-in-a-name)
+
+::::
+
+:::
+
+::: {.column-margin}
+
+:::: reading-advanced
+
+[Advanced R 2.2: Binding Basics](https://adv-r.hadley.nz/names-values.html#binding-basics)
+
+::::
+
+:::
+
+So far, every value we've used has disappeared as soon as R printed it, we haven't *saved* anything. To do anything useful with R, we need a way to store a value so we can use it again later. We do this by creating **objects** that hold data.
+
+## Creating Objects
+
+We 'assign' values to objects via the 'assignment' operator, `<-`.
+
+The following code assigns the values `7`, `2.5`, and `"foo"` to the objects `x`, `y`, and `z`, respectively.
+
+```{r}
+x <- 7
+y <- 2.5
+z <- "foo"
+```
+
+**Do:** run the code above.
+
+**See:** notice the lack of printed output. These three commands create three new objects in your environment (`x`, `y`, `z`) that store the assigned data values (`7`, `2.5`, `"foo"`). However, we haven't yet asked R to do anything with those stored values, so we don't see any printed output.
+
+**Explain:** assignment is a *silent* action: it changes what R remembers, but it doesn't print anything by itself. This trips up almost everyone the first time, so it's worth internalizing now: *assigning* a value and *displaying* a value are two separate steps.
+
+## Viewing an Object's Value
+
+To view the contents of an object, we can evaluate the object's name without assignment.
+
+```{webr-r}
+#| context: "setup"
+
+x <- 7
+y <- 2.5
+```
+
+Run the following code to print the values saved as `x` and `y`.
+
+```{webr-r}
+x
+y
+```
+
+::: practice
+
+## Practice: Predict, Then Run
+
+Given `x <- 7` and `y <- 2.5` (already run above), predict what each line below will print before running it.
+
+```{r, eval = FALSE}
+x + y
+x
+x - 1
+x
+```
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+x + y
+x
+x - 1
+x
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+x + y
+x
+x - 1
+x
+```
+
+Notice that `x` still equals `7` after the last line, even though we just computed `x - 1`. Doing arithmetic *with* an object does not change the value stored *in* that object, R only updates an object's value when you explicitly re-assign it with `<-`.
+::::
+
+:::
+
+## Copies, Not Renames
+
+We can also create new objects by assigning them the values of existing objects.
+
+The following code creates a new object, `w`, that takes the value of the existing object `z`. When we print the value
+of `w`, you can see that it has the same value as `z`.
+
+```{r}
+w <- z
+w
+z
+```
+
+When we create `w` above, we are not replacing `z` with `w`: we're making a copy of `z` and calling that copy `w`. So, both `w` and `z` are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you're working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you're not careful.
+
+## Quick Check
+
+- After running `w <- z`, does changing `w` also change `z`? Why or why not?
+- What is printed when you run `x <- 7` by itself? What about when you run just `x` on the next line?
+
+Test both questions in the editor if you're not sure.
+
+```{webr-r}
+```

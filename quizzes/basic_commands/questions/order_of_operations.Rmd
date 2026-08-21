@@ -1,0 +1,30 @@
+```{r prep, echo = FALSE, results = "hide", cache = FALSE}
+## Create a few candidate expressions that hinge on order of operations
+x <- c(
+  "2 + 3 * 4",
+  "(2 + 3) * 4",
+  "10 - 2 * 3",
+  "(10 - 2) * 3"
+)
+
+## Sample one expression to use for the question
+q <- sample(x, 1)
+a <- eval(rlang::parse_expr(q))
+```
+
+Question
+========
+What value will the following R code produce?
+
+`r q`
+
+Solution
+========
+By applying the appropriate order of operations (parentheses before multiplication/division before
+addition/subtraction), we get `r a`.
+
+Meta-information
+================
+exname: Order of Operations
+extype: num
+exsolution: `r a`

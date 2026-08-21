@@ -1,0 +1,51 @@
+---
+title: "Comments"
+---
+
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 2.2: Comments](https://r4ds.hadley.nz/workflow-basics.html#comments)
+
+::::
+
+:::
+
+This is a short one. The comment character in R is `#`. Each commented line must be preceded by a `#` symbol. There are no block comments in R. Comments are not evaluated when you run your code. R simply ignores anything after a `#` on a given line.
+
+**Do:** run the following R code to generate two integer vectors and print the results.
+
+```{webr-r}
+1:10
+2:8
+```
+
+**Predict:** what do you expect to happen if you put a `#` in front of the first line below, then run the code?
+
+```{webr-r}
+#1:10
+2:8
+```
+
+**Explain:** in the code above, the expression `1:10` is "commented out", so R doesn't evaluate that line at all. Instead, it's treated as plain text, not code. So, running the code only prints the second vector, `2:8`.
+
+Comments are mainly useful for leaving short notes to yourself (or to anyone else reading your code) about *why* a particular line does what it does. You've already seen several examples of this throughout this module, e.g.:
+
+```{r}
+## Add 2 and 2
+2 + 2
+```
+
+## Quick Check
+
+What will the following code print? Predict first, then check your answer in the editor.
+
+```{r, eval = FALSE}
+5 + 5
+# 5 - 5
+5 * 5
+```
+
+```{webr-r}
+```

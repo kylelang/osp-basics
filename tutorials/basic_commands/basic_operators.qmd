@@ -1,0 +1,78 @@
+---
+title: "Basic Operators"
+---
+
+## Arithmetic With Objects
+
+All of the familiar arithmetic operators you practiced in the last tutorial (`+`, `-`, `*`, `/`) also work on named R
+objects. When we do arithmetic on named objects, R substitutes the values stored inside those objects into the
+expression before evaluating it.
+
+```{r}
+## First, define a few objects to use below.
+x <- 2.5
+y <- 7
+z <- 5
+```
+
+**Do:** run the code above, then run the code below.
+
+```{webr-r}
+#| context: "setup"
+
+x <- 2.5
+y <- 7
+z <- 5
+```
+
+```{webr-r}
+y + x
+y - x
+y * x
+y / x
+```
+
+**See:** each line prints a number, computed by substituting the stored values of `y` (`7`) and `x` (`2.5`) into the
+expression.
+
+::: practice
+
+## Practice: Predict, Then Run
+
+Given the objects defined above (`x = 2.5`, `y = 7`, `z = 5`), predict the value of each expression *before* running
+it.
+
+```{r, eval = FALSE}
+z + y
+z * x
+z - y
+```
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+z + y
+z * x
+z - y
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+z + y
+z * x
+z - y
+```
+
+Notice that R never "sees" the letters `x`, `y`, `z` as text. Instead, it looks up whatever value is currently stored in each object and calculates with *that*. If you'd assigned different values to `x`, `y`, or `z`, these same three lines of code would produce entirely different answers without you changing a single character of the arithmetic itself. This is one of the most useful properties of programming: the same logic can be reused with different data.
+
+::::
+
+:::
+
+## Why Bother With Objects at All?
+
+You might wonder why we don't just write `7 + 2.5` directly instead of `y + x`. For a single calculation, writing the numbers directly is perfectly fine. But once your calculations get longer, or once you want to reuse a value multiple times, giving that value a name (an object) makes your code far easier to read, reuse, and fix.
+
+We'll return to objects properly, including how to *create* them, a little later in this tutorial. For now, the important idea is just that R objects behave like named "slots" that hold a value, and arithmetic on those objects uses whatever value is stored inside.

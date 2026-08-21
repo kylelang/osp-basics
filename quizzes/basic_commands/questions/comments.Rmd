@@ -1,0 +1,35 @@
+Question
+========
+What will the following R code print when you run it?
+
+```
+5 + 5
+# 5 - 5
+5 * 5
+```
+
+Answerlist
+----------
+* `10` and `25`
+* `10`, `0`, and `25`
+* `0` and `25`
+* An error, because the second line is invalid R code
+* `10` and `0`
+
+Solution
+========
+
+Answerlist
+----------
+* Correct: the line starting with `#` is a comment and is never evaluated, so R only prints the results of the first and third lines.
+* Incorrect: the commented line is never evaluated by R, so `0` is never printed.
+* Incorrect: the first line (`5 + 5`) is still evaluated and printed.
+* Incorrect: a `#` simply marks the rest of the line as a comment; it doesn't cause an error.
+* Incorrect: the third line (`5 * 5`) is still evaluated and printed.
+
+Meta-information
+================
+exname: Comments
+extype: schoice
+exsolution: 10000
+exshuffle: TRUE

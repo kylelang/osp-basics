@@ -1,0 +1,105 @@
+---
+title: "Environments"
+---
+
+::: {.callout-note}
+
+## Optional Topic
+
+This page is a bonus topic. You don't need to master environments to move on to the next tutorial on [R Functions](/tutorials/functions/index.qmd).
+
+:::
+
+## What is an "Environment"
+
+::: {.column-margin}
+
+:::: reading-advanced
+
+[Advanced R: Environments](https://adv-r.hadley.nz/environments.html)
+
+::::
+
+:::
+
+Every R command is executed in a particular *environment*. Conceptually, you can think of R environments as collections of the objects that R currently has stored in working memory. At this point, you only need to consider one of R's several
+types of environment: the *Global Environment*.
+
+### Global Environment
+
+The global environment is the highest-level environment that R maintains. This environment contains all of the objects you define in your R session. The interactions described below all interface with the global environment. The *Environment* tab in RStudio shows the contents of the global environment, by default.
+
+## Interacting with the Environment
+
+We can use the `ls()` function to list the contents of the current environment.
+
+```{r}
+## The environment is empty because we haven't defined any objects
+ls()
+
+## Create some objects
+x <- 7
+y <- 8
+z <- 9
+name <- "bob"
+age <- 38
+
+## View the updated contents of the environment
+ls()
+```
+
+The `rm()` function will remove an object from the environment. The following code will remove `x` from the environment.
+
+```{r}
+rm(x) # Remove 'x' from the environment
+ls()  # Check the results
+```
+
+::: practice
+
+## Practice
+
+1. Use the `ls()` function to view the contents of the environment.
+1. Use the `rm()` function to remove `age` from the environment.
+1. Use `ls()` to check your work.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+#| context: "setup"
+
+y <- 8
+z <- 9
+name <- "bob"
+age <- 38
+```
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+ls()
+rm(age)
+ls()
+```
+::::
+
+:::
+
+::: {.callout-tip}
+
+## Ready to Continue?
+
+You're ready to move on to [R Functions](/tutorials/functions/index.qmd) if you can:
+
+- Run a calculation in R.
+- Interpret the printed output of an R command.
+- Write a simple R expression using at least one arithmetic or logical operator.
+- Explain what a comment does, and write one yourself.
+
+If any of these still feel shaky, that's completely fine, revisit the relevant page above before continuing, or try the [Knowledge Quiz](/quizzes/basic_commands/index.qmd) to see exactly where to focus.
+
+:::
