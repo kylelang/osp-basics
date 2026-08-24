@@ -34,7 +34,6 @@ website:
         contents:
           - href: tutorials/basic_commands/fundamentals.qmd
           - href: tutorials/basic_commands/objects.qmd
-          - href: tutorials/basic_commands/basic_operators.qmd
           - href: tutorials/basic_commands/extended_operators.qmd
           - href: tutorials/basic_commands/logical_comparisons.qmd
           - href: tutorials/basic_commands/comments.qmd

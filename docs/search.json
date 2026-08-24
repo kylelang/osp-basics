@@ -233,13 +233,13 @@
   {
     "objectID": "tutorials/basic_commands/objects.html",
     "href": "tutorials/basic_commands/objects.html",
-    "title": "Objects (Assignment)",
+    "title": "R Objects & Assignment",
     "section": "",
-    "text": "Reading\n\n\n\nR4DS 2.3: Object Names\n\n\n\n\n\n\n\n\n\nAdvanced Reading\n\n\n\nAdvanced R 2.2: Binding Basics\n\n\n\nSo far, every value we’ve used has disappeared as soon as R printed it, we haven’t saved anything. To do anything useful with R, we need a way to store a value so we can use it again later. We do this by creating objects that hold data.",
+    "text": "On the last page, every value we used disappeared as soon as R printed it, we didn’t store any data for later. To do anything useful with R, we need a way to store a value so we can use it again in future commands. We do this by creating objects that hold the pieces of data we want to work with.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "Objects (Assignment)"
+      "R Objects & Assignment"
     ]
   },
   {
@@ -257,13 +257,13 @@
   {
     "objectID": "tutorials/basic_commands/objects.html#creating-objects",
     "href": "tutorials/basic_commands/objects.html#creating-objects",
-    "title": "Objects (Assignment)",
+    "title": "R Objects & Assignment",
     "section": "Creating Objects",
-    "text": "Creating Objects\nWe ‘assign’ values to objects via the ‘assignment’ operator, &lt;-.\nThe following code assigns the values 7, 2.5, and \"foo\" to the objects x, y, and z, respectively.\n\nx &lt;- 7\ny &lt;- 2.5\nz &lt;- \"foo\"\n\nDo: run the code above.\nSee: notice the lack of printed output. These three commands create three new objects in your environment (x, y, z) that store the assigned data values (7, 2.5, \"foo\"). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.\nExplain: assignment is a silent action: it changes what R remembers, but it doesn’t print anything by itself. This trips up almost everyone the first time, so it’s worth internalizing now: assigning a value and displaying a value are two separate steps.",
+    "text": "Creating Objects\nWe create objects by ‘assigning’ values to names via the ‘assignment’ operator, &lt;-. The following code assigns the values 7, 2.5, and \"foo\" to the objects x, y, and z, respectively.\nDo: Run the following code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSee: Notice the lack of printed output. These three commands create three new objects in your environment (x, y, z) that store the assigned data values (7, 2.5, \"foo\"). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.\nAssignment is a silent operation: it creates a new object in the current R session but doesn’t print anything. This behavior can be confusing, so it’s worth taking a moment to internalize the distinction. Assigning a value and printing a value are two separate steps.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "Objects (Assignment)"
+      "R Objects & Assignment"
     ]
   },
   {
@@ -281,25 +281,25 @@
   {
     "objectID": "tutorials/basic_commands/objects.html#copies-not-renames",
     "href": "tutorials/basic_commands/objects.html#copies-not-renames",
-    "title": "Objects (Assignment)",
+    "title": "R Objects & Assignment",
     "section": "Copies, Not Renames",
-    "text": "Copies, Not Renames\nWe can also create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] \"foo\"\n\nz\n\n[1] \"foo\"\n\n\nWhen we create w above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.",
+    "text": "Copies, Not Renames\nWe can also create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] 5\n\nz\n\n[1] 5\n\n\nWhen we create w above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "Objects (Assignment)"
+      "R Objects & Assignment"
     ]
   },
   {
     "objectID": "tutorials/basic_commands/objects.html#quick-check",
     "href": "tutorials/basic_commands/objects.html#quick-check",
-    "title": "Objects (Assignment)",
+    "title": "R Objects & Assignment",
     "section": "Quick Check",
-    "text": "Quick Check\n\nAfter running w &lt;- z, does changing w also change z? Why or why not?\nWhat is printed when you run x &lt;- 7 by itself? What about when you run just x on the next line?\n\nTest both questions in the editor if you’re not sure.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "text": "Quick Check\n\nAfter running w &lt;- z, does changing w also change z? Why or why not?\nWhat is printed when you run x &lt;- 7 by itself? What about when you run just x on the next line?\n\nTest both questions in the editor if you’re not sure.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nPractice: Predict, Then Run\n\n\n\nGiven the objects defined above (x = 2.5, y = 7, z = 5), predict the value of each expression before running it.\n\nz + y\nz * x\nz - y\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nz + y\n\n[1] 12\n\nz * x\n\n[1] 12.5\n\nz - y\n\n[1] -2\n\n\nNotice that R never “sees” the letters x, y, z as text. Instead, it looks up whatever value is currently stored in each object and calculates with that. If you’d assigned different values to x, y, or z, these same three lines of code would produce entirely different answers without you changing a single character of the arithmetic itself. This is one of the most useful properties of programming: the same logic can be reused with different data.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "Objects (Assignment)"
+      "R Objects & Assignment"
     ]
   },
   {
@@ -1323,6 +1323,66 @@
       "Open-Stat-Prog",
       "Tutorial",
       "Fundamental Interactions"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/objects.html#arithmetic-with-objects",
+    "href": "tutorials/basic_commands/objects.html#arithmetic-with-objects",
+    "title": "R Objects & Assignment",
+    "section": "Arithmetic with Objects",
+    "text": "Arithmetic with Objects\nAll of the familiar arithmetic operators you practiced on the previous page (+, -, *, /) also work on named R objects. When we do arithmetic on named objects, R substitutes the values stored inside those objects into the expression before evaluating it.\n\n# First, define a few objects to use below.\nx &lt;- 2.5\ny &lt;- 7\nz &lt;- 5\n\nDo: Run the following code to create the objects x, y, and z.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSee: Notice that these assignment commands don’t print anything.\nDo: Run the following code and note what each line produces.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSee: Each line prints a number, computed by substituting the stored values of y (7) and x (2.5) into the expression.\n\n\n\n\n\n\nPractice\n\n\n\nGiven x &lt;- 7 and y &lt;- 2.5 (already run above), predict what each of the following lines will print before running them.\n\nx\ny\nx + y\nx - 1\nx\n\nUse the interactive editor to check your predictions.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nx\n\n[1] 2.5\n\ny\n\n[1] 7\n\nx + y\n\n[1] 9.5\n\nx - 1\n\n[1] 1.5\n\nx\n\n[1] 2.5\n\n\n\n\n\n\n\n\nImportant\n\n\n\nNotice that x still has the value 7 when running the last line, even though we just computed x - 1 on the line above. Doing arithmetic with an object does not change the value stored in that object. R only updates an object’s value when you explicitly re-assign it with &lt;-.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "R Objects & Assignment"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/objects.html#why-bother-with-objects-at-all",
+    "href": "tutorials/basic_commands/objects.html#why-bother-with-objects-at-all",
+    "title": "R Objects & Assignment",
+    "section": "Why Bother with Objects at All?",
+    "text": "Why Bother with Objects at All?\nYou might wonder why we don’t just write 7 + 2.5 directly instead of y + x. For a single calculation, writing the numbers directly is perfectly fine. But once your calculations get longer, or once you want to reuse a value multiple times, giving that value a name (an object) makes your code far easier to read, reuse, and fix.\nWe’ll return to objects properly, including how to create them, a little later in this tutorial. For now, the important idea is just that R objects behave like named “slots” that hold a value, and arithmetic on those objects uses whatever value is stored inside.\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nWhat is printed when you run x &lt;- 7 by itself? What about when you run just x on the next line?\nAfter running w &lt;- z, does changing w also change z? Why or why not?\n\nUse the interactive editor to check your understanding.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "R Objects & Assignment"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/objects.html#printing-an-objects-value",
+    "href": "tutorials/basic_commands/objects.html#printing-an-objects-value",
+    "title": "R Objects & Assignment",
+    "section": "Printing an Object’s Value",
+    "text": "Printing an Object’s Value\nTo view the contents of an object, we can evaluate the object’s name without assignment. Doing so will print the contents of the object in the R console.\nDo: Run the following code to print the values saved as x and y.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nNote\n\n\n\nTechnically, = and -&gt; can also be used for assignment, but doing so is strongly discouraged by almost all style guides.\n\n# Don't do this\na = \"alice\"\na\n\n[1] \"alice\"\n\n# Don't do this either\n\"bob\" -&gt; b\nb\n\n[1] \"bob\"\n\n\nUnless you have a very good reason to do otherwise, use only &lt;- for assignment.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "R Objects & Assignment"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/objects.html#assigning-existing-objects",
+    "href": "tutorials/basic_commands/objects.html#assigning-existing-objects",
+    "title": "R Objects & Assignment",
+    "section": "Assigning Existing Objects",
+    "text": "Assigning Existing Objects\nIn real-world data analysis, we rarely create objects by directly assigning single numbers. Typically, we create objects by manipulating existing objects and assigning the manipulated version to a new name. Fortunately, R is perfectly happy to create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] 5\n\nz\n\n[1] 5\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWhen we create w in the code above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available (otherwise we wouldn’t be able to print the value of z). In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets, because you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.\n\n\n\n\n\n\n\n\nPractice\n\n\n\nGiven the objects defined above (x = 2.5, y = 7, z = 5), predict the value of each expression before running it.\n\nz + y\nz * x\nz - y\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nz + y\n\n[1] 12\n\nz * x\n\n[1] 12.5\n\nz - y\n\n[1] -2\n\n\nNotice that R does not interpret the letters x, y, z as text. Instead, it uses whatever value is currently stored in each object when doing the calculations. If you assign different values to x, y, or z, these same three lines would produce entirely different answers. Try it for yourself.\nIn the following code block, replace the ? with a new value for z, and rerun the expressions.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNotice how each line now produces a different result, even though you didn’t change anything about the expressions, themselves. This paradigm is one of the most useful properties of programmatic data analysis. By changing the values stored in the relevant objects (e.g., by loading a different dataset), you can reuse the same code to re-run the same calculation on different data.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "R Objects & Assignment"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/objects.html#why-bother",
+    "href": "tutorials/basic_commands/objects.html#why-bother",
+    "title": "R Objects & Assignment",
+    "section": "Why Bother?",
+    "text": "Why Bother?\nYou might wonder why we don’t just write 7 + 2.5 directly instead of first assigning 7 to y, then assigning 2.5 to x, and finally computing y + x. For a single calculation, writing the numbers directly is perfectly fine, but not when your calculations get longer and more complex. In real-world projects, you will need to reuse certain data values multiple times. So, storing those values as named objects makes your code far easier to read, reuse, and fix.\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nWhat is printed when you run x &lt;- 7 by itself? What about when you run just x on the next line?\nAfter running w &lt;- z, does changing w also change z? Why or why not?\n\nUse the interactive editor to check your understanding.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "R Objects & Assignment"
     ]
   }
 ]

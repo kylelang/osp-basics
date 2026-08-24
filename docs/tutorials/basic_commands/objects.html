@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Objects (Assignment) – Basic Commands</title>
+<title>R Objects &amp; Assignment – Basic Commands</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,7 +64,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../tutorials/basic_commands/basic_operators.html" rel="next">
+<link href="../../tutorials/basic_commands/extended_operators.html" rel="next">
 <link href="../../tutorials/basic_commands/fundamentals.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"fig-width":7,"out-width":"700px","fig-height":5,"warning":"true","classes":"","editor-max-height":"","out-height":"","context":"setup","editor-quick-suggestions":"false","editor-word-wrap":"true","label":"unnamed-chunk-1","message":"true","read-only":"false","fig-cap":"","output":"true","autorun":"true","comment":"","editor-font-scale":"1","dpi":72,"results":"markup"},"code":"x <- 7\ny <- 2.5","id":1},{"options":{"fig-width":7,"out-width":"700px","fig-height":5,"warning":"true","classes":"","editor-max-height":"","out-height":"","context":"interactive","editor-quick-suggestions":"false","editor-word-wrap":"true","label":"unnamed-chunk-2","message":"true","read-only":"false","fig-cap":"","output":"true","autorun":"false","comment":"","editor-font-scale":"1","dpi":72,"results":"markup"},"code":"x\ny","id":2},{"options":{"fig-width":7,"out-width":"700px","fig-height":5,"warning":"true","classes":"","editor-max-height":"","out-height":"","context":"interactive","editor-quick-suggestions":"false","editor-word-wrap":"true","label":"unnamed-chunk-3","message":"true","read-only":"false","fig-cap":"","output":"true","autorun":"false","comment":"","editor-font-scale":"1","dpi":72,"results":"markup"},"code":"x + y\nx\nx - 1\nx","id":3},{"options":{"fig-width":7,"out-width":"700px","fig-height":5,"warning":"true","classes":"","editor-max-height":"","out-height":"","context":"interactive","editor-quick-suggestions":"false","editor-word-wrap":"true","label":"unnamed-chunk-4","message":"true","read-only":"false","fig-cap":"","output":"true","autorun":"false","comment":"","editor-font-scale":"1","dpi":72,"results":"markup"},"code":"","id":4}];
+globalThis.qwebrCellDetails = [{"code":"x <- 7\ny <- 2.5\nz <- \"foo\"","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-1","editor-word-wrap":"true","autorun":"TRUE","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":1},{"code":"x\ny","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-2","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":2},{"code":"x <- 2.5\ny <- 7\nz <- 5","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-3","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":3},{"code":"y + x\ny - x\ny * x\ny / x","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-4","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":4},{"code":"","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-5","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":5},{"code":"","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-6","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":6},{"code":"z <- ?\n\nz + y\nz * x\nz - y","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-7","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":7},{"code":"","options":{"warning":"true","comment":"","context":"interactive","editor-quick-suggestions":"false","label":"unnamed-chunk-8","editor-word-wrap":"true","autorun":"false","fig-width":7,"editor-font-scale":"1","dpi":72,"editor-max-height":"","fig-cap":"","out-width":"700px","read-only":"false","message":"true","output":"true","classes":"","fig-height":5,"results":"markup","out-height":""},"id":8}];
 
 </script>
 <script type="module">
@@ -1658,19 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-explanation.callout {
-  border-left-color: violet;
-}
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f075' !important;
-  background-image: none;
-}
 div.callout-knowledge-check.callout {
   border-left-color: #368FFF;
 }
@@ -1684,30 +1671,17 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   content: '\f044' !important;
   background-image: none;
 }
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
+div.callout-practice.callout {
+  border-left-color: green;
 }
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
 }
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
+  content: '\f085' !important;
   background-image: none;
 }
 div.callout-going-further.callout {
@@ -1721,6 +1695,32 @@ div.callout-going-further.callout-style-default .callout-icon::before, div.callo
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f4d7' !important;
+  background-image: none;
+}
+div.callout-explanation.callout {
+  border-left-color: violet;
+}
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f075' !important;
+  background-image: none;
+}
+div.callout-completion-time.callout {
+  border-left-color: gray;
+}
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f2f2' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -1749,30 +1749,30 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-practice.callout {
-  border-left-color: green;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f085' !important;
+  content: '\f518' !important;
   background-image: none;
 }
-div.callout-completion-time.callout {
-  border-left-color: gray;
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
 }
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
 }
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f2f2' !important;
+  content: '\f188' !important;
   background-image: none;
 }
 </style>
@@ -1827,7 +1827,7 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/objects.html">Objects (Assignment)</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/objects.html">R Objects &amp; Assignment</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -1863,13 +1863,7 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/basic_commands/objects.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Objects (Assignment)</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../tutorials/basic_commands/basic_operators.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Basic Operators</span></a>
+ <span class="menu-text">R Objects &amp; Assignment</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1920,11 +1914,11 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#why-do-we-need-objects" id="toc-why-do-we-need-objects" class="nav-link active" data-scroll-target="#why-do-we-need-objects">Why Do We Need Objects?</a></li>
-  <li><a href="#creating-objects" id="toc-creating-objects" class="nav-link" data-scroll-target="#creating-objects">Creating Objects</a></li>
-  <li><a href="#viewing-an-objects-value" id="toc-viewing-an-objects-value" class="nav-link" data-scroll-target="#viewing-an-objects-value">Viewing an Object’s Value</a></li>
-  <li><a href="#copies-not-renames" id="toc-copies-not-renames" class="nav-link" data-scroll-target="#copies-not-renames">Copies, Not Renames</a></li>
-  <li><a href="#quick-check" id="toc-quick-check" class="nav-link" data-scroll-target="#quick-check">Quick Check</a></li>
+  <li><a href="#creating-objects" id="toc-creating-objects" class="nav-link active" data-scroll-target="#creating-objects">Creating Objects</a></li>
+  <li><a href="#printing-an-objects-value" id="toc-printing-an-objects-value" class="nav-link" data-scroll-target="#printing-an-objects-value">Printing an Object’s Value</a></li>
+  <li><a href="#arithmetic-with-objects" id="toc-arithmetic-with-objects" class="nav-link" data-scroll-target="#arithmetic-with-objects">Arithmetic with Objects</a></li>
+  <li><a href="#assigning-existing-objects" id="toc-assigning-existing-objects" class="nav-link" data-scroll-target="#assigning-existing-objects">Assigning Existing Objects</a></li>
+  <li><a href="#why-bother" id="toc-why-bother" class="nav-link" data-scroll-target="#why-bother">Why Bother?</a></li>
   </ul>
 </nav>
     </div>
@@ -2215,9 +2209,9 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 }
 </script>
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/objects.html">Objects (Assignment)</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/index.html">Tutorial</a></li><li class="breadcrumb-item"><a href="../../tutorials/basic_commands/objects.html">R Objects &amp; Assignment</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Objects (Assignment)</h1>
+<h1 class="title">R Objects &amp; Assignment</h1>
 </div>
 
 
@@ -2234,8 +2228,7 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<section id="why-do-we-need-objects" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="why-do-we-need-objects">Why Do We Need Objects?</h2>
+<p>On the last page, every value we used disappeared as soon as R printed it, we didn’t <em>store</em> any data for later. To do anything useful with R, we need a way to store a value so we can use it again in future commands. We do this by creating <strong>objects</strong> that hold the pieces of data we want to work with.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading callout-titled">
@@ -2266,105 +2259,234 @@ Advanced Reading
 </div>
 </div>
 </div></div>
-<p>So far, every value we’ve used has disappeared as soon as R printed it, we haven’t <em>saved</em> anything. To do anything useful with R, we need a way to store a value so we can use it again later. We do this by creating <strong>objects</strong> that hold data.</p>
-</section>
 <section id="creating-objects" class="level2">
 <h2 class="anchored" data-anchor-id="creating-objects">Creating Objects</h2>
-<p>We ‘assign’ values to objects via the ‘assignment’ operator, <code>&lt;-</code>.</p>
-<p>The following code assigns the values <code>7</code>, <code>2.5</code>, and <code>"foo"</code> to the objects <code>x</code>, <code>y</code>, and <code>z</code>, respectively.</p>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="dv">7</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="st">"foo"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p><strong>Do:</strong> run the code above.</p>
-<p><strong>See:</strong> notice the lack of printed output. These three commands create three new objects in your environment (<code>x</code>, <code>y</code>, <code>z</code>) that store the assigned data values (<code>7</code>, <code>2.5</code>, <code>"foo"</code>). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.</p>
-<p><strong>Explain:</strong> assignment is a <em>silent</em> action: it changes what R remembers, but it doesn’t print anything by itself. This trips up almost everyone the first time, so it’s worth internalizing now: <em>assigning</em> a value and <em>displaying</em> a value are two separate steps.</p>
-</section>
-<section id="viewing-an-objects-value" class="level2">
-<h2 class="anchored" data-anchor-id="viewing-an-objects-value">Viewing an Object’s Value</h2>
-<p>To view the contents of an object, we can evaluate the object’s name without assignment.</p>
+<p>We create objects by ‘assigning’ values to names via the ‘assignment’ operator, <code>&lt;-</code>. The following code assigns the values <code>7</code>, <code>2.5</code>, and <code>"foo"</code> to the objects <code>x</code>, <code>y</code>, and <code>z</code>, respectively.</p>
+<p><strong>Do:</strong> Run the following code.</p>
 <div id="qwebr-insertion-location-1"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
-<p>Run the following code to print the values saved as <code>x</code> and <code>y</code>.</p>
+<p><strong>See:</strong> Notice the lack of printed output. These three commands create three new objects in your environment (<code>x</code>, <code>y</code>, <code>z</code>) that store the assigned data values (<code>7</code>, <code>2.5</code>, <code>"foo"</code>). However, we haven’t yet asked R to do anything with those stored values, so we don’t see any printed output.</p>
+<p>Assignment is a <em>silent</em> operation: it creates a new object in the current R session but doesn’t print anything. This behavior can be confusing, so it’s worth taking a moment to internalize the distinction. <em>Assigning</em> a value and <em>printing</em> a value are two separate steps.</p>
+</section>
+<section id="printing-an-objects-value" class="level2">
+<h2 class="anchored" data-anchor-id="printing-an-objects-value">Printing an Object’s Value</h2>
+<p>To view the contents of an object, we can evaluate the object’s name without assignment. Doing so will print the contents of the object in the R console.</p>
+<p><strong>Do:</strong> Run the following code to print the values saved as <code>x</code> and <code>y</code>.</p>
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Technically, <code>=</code> and <code>-&gt;</code> can also be used for assignment, but doing so is strongly discouraged by almost all style guides.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Don't do this</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="st">"alice"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "alice"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Don't do this either</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="st">"bob"</span> <span class="ot">-&gt;</span> b</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>b</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "bob"</code></pre>
+</div>
+</div>
+<p>Unless you have a very good reason to do otherwise, use only <code>&lt;-</code> for assignment.</p>
+</div>
+</div>
+</section>
+<section id="arithmetic-with-objects" class="level2">
+<h2 class="anchored" data-anchor-id="arithmetic-with-objects">Arithmetic with Objects</h2>
+<p>All of the familiar arithmetic operators you practiced on the previous page (<code>+</code>, <code>-</code>, <code>*</code>, <code>/</code>) also work on named R objects. When we do arithmetic on named objects, R substitutes the values stored inside those objects into the expression before evaluating it.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># First, define a few objects to use below.</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fl">2.5</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> <span class="dv">7</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>z <span class="ot">&lt;-</span> <span class="dv">5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><strong>Do:</strong> Run the following code to create the objects <code>x</code>, <code>y</code>, and <code>z</code>.</p>
+<div id="qwebr-insertion-location-3"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>See:</strong> Notice that these assignment commands don’t print anything.</p>
+<p><strong>Do:</strong> Run the following code and note what each line produces.</p>
+<div id="qwebr-insertion-location-4"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p><strong>See:</strong> Each line prints a number, computed by substituting the stored values of <code>y</code> (<code>7</code>) and <code>x</code> (<code>2.5</code>) into the expression.</p>
 <div class="callout callout-style-default callout-practice callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Practice: Predict, Then Run
+Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Given <code>x &lt;- 7</code> and <code>y &lt;- 2.5</code> (already run above), predict what each line below will print before running it.</p>
+<p>Given <code>x &lt;- 7</code> and <code>y &lt;- 2.5</code> (already run above), predict what each of the following lines will print before running them.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>x <span class="sc">-</span> <span class="dv">1</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>x</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>y</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>x <span class="sc">-</span> <span class="dv">1</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Use the interactive editor to check your predictions.</p>
 <div class="tabset-margin-container"></div><div class="panel-tabset">
 <ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<div id="qwebr-insertion-location-3"></div>
+<div id="qwebr-insertion-location-5"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 </div>
 <div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 7</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">+</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 9.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">-</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 7</code></pre>
+<pre><code>[1] 1.5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>x <span class="sc">-</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 6</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 7</code></pre>
+<pre><code>[1] 2.5</code></pre>
 </div>
 </div>
-<p>Notice that <code>x</code> still equals <code>7</code> after the last line, even though we just computed <code>x - 1</code>. Doing arithmetic <em>with</em> an object does not change the value stored <em>in</em> that object, R only updates an object’s value when you explicitly re-assign it with <code>&lt;-</code>.</p>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Notice that <code>x</code> still has the value <code>7</code> when running the last line, even though we just computed <code>x - 1</code> on the line above. Doing arithmetic <em>with</em> an object does not change the value stored <em>in</em> that object. R only updates an object’s value when you explicitly re-assign it with <code>&lt;-</code>.</p>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 </div>
 </section>
-<section id="copies-not-renames" class="level2">
-<h2 class="anchored" data-anchor-id="copies-not-renames">Copies, Not Renames</h2>
-<p>We can also create new objects by assigning them the values of existing objects.</p>
+<section id="assigning-existing-objects" class="level2">
+<h2 class="anchored" data-anchor-id="assigning-existing-objects">Assigning Existing Objects</h2>
+<p>In real-world data analysis, we rarely create objects by directly assigning single numbers. Typically, we create objects by manipulating existing objects and assigning the manipulated version to a new name. Fortunately, R is perfectly happy to create new objects by assigning them the values of existing objects.</p>
 <p>The following code creates a new object, <code>w</code>, that takes the value of the existing object <code>z</code>. When we print the value of <code>w</code>, you can see that it has the same value as <code>z</code>.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> z</span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>w <span class="ot">&lt;-</span> z</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>w</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "foo"</code></pre>
+<pre><code>[1] 5</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>z</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "foo"</code></pre>
+<pre><code>[1] 5</code></pre>
 </div>
 </div>
-<p>When we create <code>w</code> above, we are not replacing <code>z</code> with <code>w</code>: we’re making a copy of <code>z</code> and calling that copy <code>w</code>. So, both <code>w</code> and <code>z</code> are still available. In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets: you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.</p>
-</section>
-<section id="quick-check" class="level2">
-<h2 class="anchored" data-anchor-id="quick-check">Quick Check</h2>
-<ul>
-<li>After running <code>w &lt;- z</code>, does changing <code>w</code> also change <code>z</code>? Why or why not?</li>
-<li>What is printed when you run <code>x &lt;- 7</code> by itself? What about when you run just <code>x</code> on the next line?</li>
-</ul>
-<p>Test both questions in the editor if you’re not sure.</p>
-<div id="qwebr-insertion-location-4"></div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>When we create <code>w</code> in the code above, we are not replacing <code>z</code> with <code>w</code>: we’re making a copy of <code>z</code> and calling that copy <code>w</code>. So, both <code>w</code> and <code>z</code> are still available (otherwise we wouldn’t be able to print the value of <code>z</code>). In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets, because you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-practice callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Practice
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Given the objects defined above (<code>x = 2.5</code>, <code>y = 7</code>, <code>z = 5</code>), predict the value of each expression <em>before</em> running it.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>z <span class="sc">+</span> y</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>z <span class="sc">*</span> x</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>z <span class="sc">-</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-2-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-1" role="tab" aria-controls="tabset-2-1" aria-selected="true"><i class="fa-solid fa-code" aria-label="code"></i> Interactive Editor</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-2-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-2-2" role="tab" aria-controls="tabset-2-2" aria-selected="false"><i class="fa-solid fa-circle-check" aria-label="circle-check"></i> Solution</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-2-1-tab">
+<div id="qwebr-insertion-location-6"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+<div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>z <span class="sc">+</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>z <span class="sc">*</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 12.5</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>z <span class="sc">-</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -2</code></pre>
+</div>
+</div>
+<p>Notice that R does not interpret the letters <code>x</code>, <code>y</code>, <code>z</code> as text. Instead, it uses whatever value is currently stored in each object when doing the calculations. If you assign different values to <code>x</code>, <code>y</code>, or <code>z</code>, these same three lines would produce entirely different answers. Try it for yourself.</p>
+<p>In the following code block, replace the <code>?</code> with a new value for <code>z</code>, and rerun the expressions.</p>
+<div id="qwebr-insertion-location-7"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<p>Notice how each line now produces a different result, even though you didn’t change anything about the expressions, themselves. This paradigm is one of the most useful properties of programmatic data analysis. By changing the values stored in the relevant objects (e.g., by loading a different dataset), you can reuse the same code to re-run the same calculation on different data.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="why-bother" class="level2">
+<h2 class="anchored" data-anchor-id="why-bother">Why Bother?</h2>
+<p>You might wonder why we don’t just write <code>7 + 2.5</code> directly instead of first assigning <code>7</code> to <code>y</code>, then assigning <code>2.5</code> to <code>x</code>, and finally computing <code>y + x</code>. For a single calculation, writing the numbers directly is perfectly fine, but not when your calculations get longer and more complex. In real-world projects, you will need to reuse certain data values multiple times. So, storing those values as named objects makes your code far easier to read, reuse, and fix.</p>
+<div class="callout callout-style-default callout-knowledge-check callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Knowledge Check
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>What is printed when you run <code>x &lt;- 7</code> by itself? What about when you run just <code>x</code> on the next line?</li>
+<li>After running <code>w &lt;- z</code>, does changing <code>w</code> also change <code>z</code>? Why or why not?</li>
+</ul>
+<p>Use the interactive editor to check your understanding.</p>
+<div id="qwebr-insertion-location-8"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</div>
+</div>
 
 
 </section>
@@ -2804,8 +2926,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../tutorials/basic_commands/basic_operators.html" class="pagination-link" aria-label="Basic Operators">
-        <span class="nav-page-text">Basic Operators</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../tutorials/basic_commands/extended_operators.html" class="pagination-link" aria-label="Extended Operators">
+        <span class="nav-page-text">Extended Operators</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
