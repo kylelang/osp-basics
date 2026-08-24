@@ -34,7 +34,9 @@ website:
         contents:
           - href: tutorials/basic_commands/fundamentals.qmd
           - href: tutorials/basic_commands/objects.qmd
+            text: "R Objects"
           - href: tutorials/basic_commands/extended_operators.qmd
+            text: "Additional Operators"
           - href: tutorials/basic_commands/logical_comparisons.qmd
           - href: tutorials/basic_commands/comments.qmd
           - href: tutorials/basic_commands/environments.qmd

@@ -1,11 +1,13 @@
 ---
-title: "Extended Operators"
+title: "Additional Mathematical Operators"
 ---
 
-Now that you're comfortable with the four basic arithmetic operators and how R decides which operation to do first, we can extend your toolkit with a few more operators and functions that come up often in real analyses. You don't need to memorize all of these today, treat this page as a reference you can come back to.
+Now that you're comfortable with the four basic arithmetic operators, we can extend your toolkit with a few additional,
+commonly encountered mathematical operators. You don't need to memorize all of these today, treat this page as a
+reference to which you can return.
 
-```{r, echo = FALSE, include = FALSE}
-## Define these objects so the static (knitr) chunks below can use them.
+```{r}
+# Define three objects to use in the following examples
 x <- 2.5
 y <- 7
 z <- 5
@@ -21,22 +23,27 @@ z <- 5
 
 ## Powers & Roots
 
-We use the caret character, `^`, to specify exponents. The following code will square and cube the value of `y`.
+We use the caret character, `^`, to specify exponents. For example, the following code will square and cube the value of
+`y`.
 
 ```{r}
 y^2
 y^3
 ```
 
-**Do:** run the code, then predict the output of the next chunk before revealing it.
-
-```{webr-r}
-y^2
-y^3
-```
-
 The `sqrt()` function returns the square root of its argument (i.e., the value we specify inside the parentheses). The
 following code calculates the square root of `y`.
+
+::: {.column-margin}
+
+:::: {.callout-note}
+
+Don't worry about exactly what we mean by a *function*, just yet. You'll learn all about those in the [**R
+Functions**](https://openstatprog.com/functions/index.html) module.
+
+::::
+
+:::
 
 ```{r}
 sqrt(y)
@@ -45,32 +52,46 @@ sqrt(y)
 For other roots, we can use fractional exponents.
 
 ```{r}
-y^(1/3) # cube root of y
+# Cute root of y
+y^(1/3)
+
+# Quartic root of y
 y^(1/4) # quartic root of y
 ```
 
 ## Other Common Operators
 
-R also includes many special functions for the most common mathematical operations. Rather than trying to memorize
-every one of these right now, skim the code and its comments once, then use it as a reference whenever you need one of
-these operations later.
+R also includes many special functions for the most common mathematical operations.
 
 ```{r}
-log(y)   # natural logarithm of y
-log10(y) # log base 10 of y
-log2(y)  # log base 2 of y
+# Natural logarithm of 'y'
+log(y)
 
-exp(x) # exponentiate x
+# Base-10 logarithm of 'y'
+log10(y)
 
-y %% x # modulo: remainder after dividing y by x
+# Base-2 logarithm of 'y'
+log2(y)
+
+# Exponentiate 'x'
+exp(x)
+
+# Modulo: Remainder after dividing 'y' by 'x'
+y %% x
 
 foo <- -3.14159
 
-round(foo, 3) # round 'foo' to 3 decimal places
-floor(foo)    # round 'foo' down to the nearest whole number
-ceiling(foo)  # round 'foo' up to the nearest whole number
+# Round 'foo' to 3 decimal places
+round(foo, 3)
 
-abs(foo) # absolute value of 'foo'
+# Round 'foo' down to the nearest whole number
+floor(foo)
+
+# Round 'foo' up to the nearest whole number
+ceiling(foo)
+
+# Absolute value of 'foo'
+abs(foo)
 ```
 
 ::: {.column-margin}
@@ -109,28 +130,56 @@ whenever that remainder is `0`.
 
 ## {{< var tab_title.solution >}}
 
-At time-of-writing, I'm 38 years old. So, these would be my `age` and `weeks` objects.
+At time-of-writing, I'm 40 years old. So, these would be my `age` and `weeks` objects.
 
 ```{r}
-age   <- 38
-weeks <- 38 * 52
+age   <- 40
+weeks <- 40 * 52
 weeks
+```
 
+To see if my `weeks` value is evenly divisible by 4, I'll apply the modulo operator.
+
+```{r}
 weeks %% 4
 ```
+
+```{r}
+#| include: FALSE
+
+result <- ifelse(weeks %% 4 == 0, "is", "is not")
+```
+
+Since the remainder after dividing my `weeks` value by 4 `r result` equal to 0, we conclude that my `weeks` value
+`r result` evenly divisible by 4.
+
 ::::
 
 :::
 
-## Quick Check
+::: knowledge-check
 
-Which function would you use to...
+Which function would you use to find the remainder after division?
 
-- ...find the remainder after division? (`round()` / `%%` / `abs()`)
-- ...always round a number *up*? (`floor()` / `ceiling()` / `round()`)
-- ...remove the negative sign from a number? (`sqrt()` / `abs()` / `exp()`)
+- `round()`
+- `%%`
+- `abs()`
 
-Try each candidate function in the editor to verify your answer if you're unsure.
+Which function would you use to always round a number *up*?
+
+- `floor()`
+- `ceiling()`
+- `round()`
+
+Which function would you use to remove the negative sign from a number, without changing its magnitude?
+
+- `sqrt()`
+- `abs()`
+- `exp()`
+
+Try each candidate function in the editor to verify your answer.
 
 ```{webr-r}
 ```
+
+:::
