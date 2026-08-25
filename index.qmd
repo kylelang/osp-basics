@@ -1,5 +1,5 @@
 ---
-title: "First Steps"
+title: "Basic Commands"
 page-navigation: false
 format:
   html: 
@@ -17,15 +17,17 @@ source(here::here("R", "buttons.R"))
 :::
 
 Welcome to the *Basic Commands* module. In this module, you will take the first steps in your R programming journey by
-learning the basics of R usage.
+learning the basics commands that underlie all R usage.
 
 ## Learning Goals
 
 After completing this module, you will be able to:
 
+1. Use R to conduct simple mathematical calculations
 1. Create simple R objects
 1. Conduct simple mathematical calculations involving R objects
 1. Conduct simple logical comparisons between R objects
+1. Use comments in your code
 
 Click the button below to get started.
 

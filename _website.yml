@@ -40,7 +40,6 @@ website:
           - href: tutorials/basic_commands/logical_comparisons.qmd
           - href: tutorials/basic_commands/comments.qmd
           - href: tutorials/basic_commands/environments.qmd
-            text: "Environments (optional)"
       - href: quizzes/basic_commands/index.qmd
         text: "Knowledge Quiz"
       - href: conclusion.qmd

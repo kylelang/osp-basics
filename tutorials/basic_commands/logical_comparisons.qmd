@@ -2,10 +2,35 @@
 title: "Logical Comparisons"
 ---
 
-We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value takes the value of `TRUE` whenever the tested condition is satisfied and `FALSE` when the tested condition is not satisfied.
+```{r}
+#| include: FALSE
+
+y <- 5
+x <- 7
+w <- 5
+```
+
+Almost all the commands you've seen so far have been some sort of mathematical operation (e.g., adding, dividing,
+computing the natural logarithm), but R can do much more for us. *Logical comparisons* are one particularly useful class
+of operations, in which we test compare objects to test logical conditions. We can test many flavors of logical
+conditions in R. Logical tests return a logical value as the result. A logical value is `TRUE` whenever the tested
+condition is satisfied and `FALSE` when the tested condition is not satisfied.
+
+::: {.column-margin}
+
+:::: going-further
+
+The "logical values" we describe here are actually length-one logical vectors. You'll learn all about atomic vectors in
+the [**Vectors & Matrices**](https://openstatprog.com/vectors-matrices/index.html) module.
+
+::::
+
+:::
+
+**Do:** Run the following code to create three objects that we can use below.
 
 ```{webr-r}
-#| context: "setup"
+#| autorun: TRUE
 
 y <- 5
 x <- 7
@@ -14,37 +39,63 @@ w <- 5
 
 ## Equality
 
-The simplest logical test is an equality check. To check if two objects are equal, we use the 'equality operator', `==`.
+The simplest logical test is an equality check. To check if two objects are equal, we use the equality operator, `==`.
 
 ```{r}
-## Define some objects to play with
-y <- 5
-x <- 7
-w <- 5
+1 == 1
+"a" == "a"
+"foo" == "bar"
 ```
 
+::: common-mistakes
+
+Notice that the equality test operator, `==`, is two equals signs. Remember that a single equals sign is one of the
+possible assignment operators. You cannot use a single equals sign to do a logical comparison.
+
+```{r}
+#| error: TRUE
+
+2 = 3
+```
+
+Mixing up `==` and `=` is one of the most common beginner mistakes (and experienced user typos) in R.
+
+:::
+
+**Predict:** What will the following lines print?
+
 ```{webr-r}
-### Check equality
+# Check equality
 y == x
 y == w
 ```
 
-**Explain:** `y == x` is `FALSE` because `5` is not equal to `7`. `y == w` is `TRUE` because both objects store the value `5`. Notice `==` (two equals signs) is a *comparison*, while `<-` and a single `=` are used for *assignment*. Mixing these up is one of the most common beginner mistakes in R.
+::: explanation
 
-## Greater/Lesser
+- `y == x` is `r y == x` because `r y` *`r ifelse(y == x, "is", "is not")`* equal to `r x`.
+- `y == w` is `r y == w` because `r y` *`r ifelse(y == w, "is", "is not")`* equal to `r w`.
+
+:::
+
+## Greater-Than & Less-Than
 
 We can also check the usual greater-than/less-than conditions with `>`, `<`, `>=`, `<=`.
 
 ```{r}
-y > x  # greater than
-y >= x # greater than or equal to
+# Is y greater than x?
+y > x
+
+# Is y greater than or equal to x?
+y >= x
+
+# Is y less than x?
 y < x  # less than
+
+# Is y less than or equal to x?
 y <= x # less than or equal to
 ```
 
 ::: practice
-
-## Practice: Predict, Then Run
 
 Given `y <- 5` and `w <- 5`, predict what value each of the following expressions will return.
 
@@ -55,14 +106,13 @@ y < w
 y <= w
 ```
 
+Use the interactive editor to check your predictions.
+
 :::: {.panel-tabset}
+
 ## {{< var tab_title.editor >}}
 
 ```{webr-r}
-y > w
-y >= w
-y < w
-y <= w
 ```
 
 ## {{< var tab_title.solution >}}
@@ -74,22 +124,41 @@ y < w
 y <= w
 ```
 
-Since `y` and `w` store the *same* value, `y > w` and `y < w` are both `FALSE` (neither is strictly greater or less than the other), while `y >= w` and `y <= w` are both `TRUE`, since "greater than or equal to" and "less than or equal to" are satisfied whenever the values are equal.
+`y` and `w` store the *same* value, so:
+
+- `y > w` and `y < w` are both `FALSE`, since neither is strictly greater or less than the other.
+- `y >= w` and `y <= w` are both `TRUE`, since "greater than or equal to" and "less than or equal to" are satisfied
+whenever the values are equal.
+
 ::::
 
 :::
 
 ## Logical Negation
 
-We can negate any logical condition by prepending the `!` character.
+We can negate any logical condition (i.e., change `TRUE` to `FALSE` and visa-versa) by prepending the `!` character.
 
 ```{r}
+!TRUE
+!FALSE
+
 y > x
 !y > x
+```
 
+**Predict:** What will the following two lines print?
+
+```{webr-r}
 y == w
 !y == w
 ```
+
+::: explanation
+
+- `y == w` is `r y == w` because `r y` *`r ifelse(y == w, "is", "is not")`* equal to `r w`.
+- `!y == w` is `r !y == w` because we've negated the result of the equality test.
+
+:::
 
 Rather than negating an equality check, we will typically use the special "not-equal" operator, `!=`.
 
@@ -103,49 +172,78 @@ y != w
 We can create more complex logical conditions with the AND and OR operators: `&` and `|`.
 
 ```{r}
+# Is y equal to w AND is y less than x?
 y == w & y < x
+
+# Is y equal to w AND is y greater than x?
 y == w & y > x
+
+# Is y equal to w OR is y greater than x?
 y == w | y > x
 ```
 
+**Predict:** What will the following lines print?
+
+```{webr-r}
+y == y & y != y
+w > w | w < w
+x > x | x <= x
+x >= x & x <= x
+```
+
+::: explanation
+
+1. `FALSE` because `y` is not both equal to itself and not equal to itself.
+1. `FALSE` because `w` is neither greater than itself nor less than itself.
+1. `TRUE` because `x` is not greater than itself, but `x` is less than or equal to itself.
+1. `TRUE` because `x` is both greater than or equal to itself and `x` is less than or equal to itself.
+
+:::
+
 ::: practice
 
-## Practice
+Use a single line of code to generate a logical answer (i.e., `TRUE`/`FALSE`) to the following question.
 
-Use a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the `weeks` object you created earlier is evenly divisible by 7.
+- Is the sum of the current day and the current month strictly greater than the two-digit year?
+
+Use numeric representations of the day, month, and year.
 
 :::: {.panel-tabset}
+
 ## {{< var tab_title.editor >}}
 
 ```{webr-r}
 ```
 
-## {{< var tab_title.hint >}}
-
-- Use `x %% 7` to calculate the remainder after dividing `x` by `7`.
-- If you're getting unexpected results, consider using parentheses to ensure the intended order of operations.
-- In R, the modulo operator, `%%`, takes precedence over arithmetic operations like multiplication.
-
 ## {{< var tab_title.solution >}}
 
-```{r, echo = FALSE, include = FALSE}
-weeks <- 38 * 52
-```
+Let's assume the current date is 25-08-2026. Then, today's solution would be the following.
 
 ```{r}
-(weeks %% 7) == 0
+(25 + 8) > 26
 ```
 
-If the remainder of dividing `weeks` by 7 is zero, we know that the value of `weeks` is evenly divisible by 7.
+In R, most mathematical operators take precedence over logical tests. So, the parentheses in the solution are not
+strictly necessary.
+
+```{r}
+25 + 8 > 26
+```
+
+That being said, the parentheses are still a good idea. In this case, the extra parentheses clarify exactly what we're
+testing, and less ambiguity is almost always a good thing.
+
 ::::
 
 :::
 
-## Quick Check
+::: knowledge-check
 
 - What's the difference between `=` and `==` in R?
 - If `a <- 3` and `b <- 4`, what does `a != b` return?
-- Write (but don't necessarily run) an expression that checks whether `a` is greater than `1` *and* less than `10`.
+- Write an expression that checks whether `a` is greater than `1` *and* less than `10`.
 
 ```{webr-r}
 ```
+
+:::

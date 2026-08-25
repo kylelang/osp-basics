@@ -239,7 +239,7 @@
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "R Objects & Assignment"
+      "R Objects"
     ]
   },
   {
@@ -263,7 +263,7 @@
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "R Objects & Assignment"
+      "R Objects"
     ]
   },
   {
@@ -366,7 +366,7 @@
     "href": "tutorials/basic_commands/comments.html",
     "title": "Comments",
     "section": "",
-    "text": "Reading\n\n\n\nR4DS 2.2: Comments\nThis is a short one. The comment character in R is #. Each commented line must be preceded by a # symbol. There are no block comments in R. Comments are not evaluated when you run your code. R simply ignores anything after a # on a given line.\nDo: run the following R code to generate two integer vectors and print the results.\nPredict: what do you expect to happen if you put a # in front of the first line below, then run the code?\nExplain: in the code above, the expression 1:10 is “commented out”, so R doesn’t evaluate that line at all. Instead, it’s treated as plain text, not code. So, running the code only prints the second vector, 2:8.\nComments are mainly useful for leaving short notes to yourself (or to anyone else reading your code) about why a particular line does what it does. You’ve already seen several examples of this throughout this module, e.g.:\n## Add 2 and 2\n2 + 2\n\n[1] 4",
+    "text": "Reading\n\n\n\nR4DS 2.2: Comments\nLike any sensible programming language, R allows us to include comments in our code. The comment character in R is #. Each line preceded by at least one # symbol will be interpreted as a comment. Comments are not evaluated when you run your code. R simply ignores anything after the # character.\n# This is a comment, not code\n1 + 1\n\n[1] 2\n\n2^2 # first three characters on this line are code; the rest is a comment\n\n[1] 4\nDo: Run the following code to generate two integer vectors and print the results.\nPredict: What will the following lines print?\nThere are no block comments in R. So, you need to add a # character before every line when you want to create multi-line comments.\n# This is a really long-winded explanation of exactly why the following is\n# such a very super-duper awesome way of doing this thing that I'm trying to\n# do here, because I'm a special little teapot, and I've got the very best\n# ideas, and you really, really need to know about them.\nx &lt;- 1\ny &lt;- 1\nz &lt;- x + y\nz\n\n[1] 2",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
@@ -574,9 +574,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "First Steps",
+    "title": "Basic Commands",
     "section": "",
-    "text": "Estimated Completion Time\n\n\n\nAbout 30–45 minutes, including practice exercises and knowledge quizzes.\nWelcome to the Basic Commands module. In this module, you will take the first steps in your R programming journey by learning the basics of R usage.",
+    "text": "Estimated Completion Time\n\n\n\nAbout 30–45 minutes, including practice exercises and knowledge quizzes.\nWelcome to the Basic Commands module. In this module, you will take the first steps in your R programming journey by learning the basics commands that underlie all R usage.",
     "crumbs": [
       "Open-Stat-Prog",
       "Overview"
@@ -585,9 +585,9 @@
   {
     "objectID": "index.html#learning-goals",
     "href": "index.html#learning-goals",
-    "title": "First Steps",
+    "title": "Basic Commands",
     "section": "Learning Goals",
-    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nCreate simple R objects\nConduct simple mathematical calculations involving R objects\nConduct simple logical comparisons between R objects\n\nClick the button below to get started.\n\n\n Begin Tutorial",
+    "text": "Learning Goals\nAfter completing this module, you will be able to:\n\nUse R to conduct simple mathematical calculations\nCreate simple R objects\nConduct simple mathematical calculations involving R objects\nConduct simple logical comparisons between R objects\nUse comments in your code\n\nClick the button below to get started.\n\n\n Begin Tutorial",
     "crumbs": [
       "Open-Stat-Prog",
       "Overview"
@@ -874,11 +874,11 @@
     "href": "tutorials/basic_commands/environments.html",
     "title": "Environments",
     "section": "",
-    "text": "Optional Topic\n\n\n\nThis page is a bonus topic. You don’t need to master environments to move on to the next tutorial on R Functions.",
+    "text": "Advanced Reading\n\n\n\nAdvanced R: Environments\nEvery R command is executed in a particular environment. Conceptually, you can think of R environments as collections of the objects that R currently has stored in working memory. For most day-to-day R usage, you only need to consider one of R’s several types of environment: the Global Environment.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "Environments (optional)"
+      "Environments"
     ]
   },
   {
@@ -898,7 +898,7 @@
     "href": "tutorials/basic_commands/environments.html#interacting-with-the-environment",
     "title": "Environments",
     "section": "Interacting with the Environment",
-    "text": "Interacting with the Environment\nWe can use the ls() function to list the contents of the current environment.\n\n## The environment is empty because we haven't defined any objects\nls()\n\ncharacter(0)\n\n## Create some objects\nx &lt;- 7\ny &lt;- 8\nz &lt;- 9\nname &lt;- \"bob\"\nage &lt;- 38\n\n## View the updated contents of the environment\nls()\n\n[1] \"age\"  \"name\" \"x\"    \"y\"    \"z\"   \n\n\nThe rm() function will remove an object from the environment. The following code will remove x from the environment.\n\nrm(x) # Remove 'x' from the environment\nls()  # Check the results\n\n[1] \"age\"  \"name\" \"y\"    \"z\"   \n\n\n\n\n\n\n\n\nPractice\n\n\n\n\nUse the ls() function to view the contents of the environment.\nUse the rm() function to remove age from the environment.\nUse ls() to check your work.\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nls()\n\n[1] \"age\"  \"name\" \"y\"    \"z\"   \n\nrm(age)\nls()\n\n[1] \"name\" \"y\"    \"z\"   \n\n\n\n\n\n\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to R Functions if you can:\n\nRun a calculation in R.\nInterpret the printed output of an R command.\nWrite a simple R expression using at least one arithmetic or logical operator.\nExplain what a comment does, and write one yourself.\n\nIf any of these still feel shaky, that’s completely fine, revisit the relevant page above before continuing, or try the Knowledge Quiz to see exactly where to focus.",
+    "text": "Interacting with the Environment\nWe can use the ls() function to list the contents of the current environment.\n\nls()\n\ncharacter(0)\n\n\nIn this case, the environment is empty because we haven’t yet defined any objects.\nDo: Run the following code to add some objects to the current environment.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo: Use the interactive editor below to run the ls() function. What do you see?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nYou should now see a listing of all the objects you just created. Remember: whenever we create a new object, we’re storing that object in the global environment.\n\n\n\nThe rm() function will remove an object from the environment.\nDo: Run the following code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSee: What effect did rm(x) have?\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nThe listing returned by ls() no longer shows x, because you removed x from the environment by calling rm(x).\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\n\nUse the ls() function to view the contents of the environment.\nUse the rm() function to remove age from the environment.\nUse ls() to check your work.\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nls()\n\n[1] \"age\"  \"name\" \"y\"    \"z\"   \n\nrm(age)\nls()\n\n[1] \"name\" \"y\"    \"z\"   \n\n\n\n\n\n\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to R Functions if you can:\n\nRun a simple calculation in R.\nWrite a simple R expression using at least one arithmetic or logical operator.\nExplain what a comment does, and write one yourself.\n\nIf any of these still feel shaky, that’s completely fine, revisit the relevant page above before continuing, or try the Knowledge Quiz to see exactly where to focus.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
@@ -958,7 +958,7 @@
     "href": "tutorials/basic_commands/logical_comparisons.html",
     "title": "Logical Comparisons",
     "section": "",
-    "text": "We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value takes the value of TRUE whenever the tested condition is satisfied and FALSE when the tested condition is not satisfied.",
+    "text": "Almost all the commands you’ve seen so far have been some sort of mathematical operation (e.g., adding, dividing, computing the natural logarithm), but R can do much more for us. Logical comparisons are one particularly useful class of operations, in which we test compare objects to test logical conditions. We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value is TRUE whenever the tested condition is satisfied and FALSE when the tested condition is not satisfied.\nDo: Run the following code to create three objects that we can use below.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
@@ -970,7 +970,7 @@
     "href": "tutorials/basic_commands/logical_comparisons.html#equality",
     "title": "Logical Comparisons",
     "section": "Equality",
-    "text": "Equality\nThe simplest logical test is an equality check. To check if two objects are equal, we use the ‘equality operator’, ==.\n\n## Define some objects to play with\ny &lt;- 5\nx &lt;- 7\nw &lt;- 5\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nExplain: y == x is FALSE because 5 is not equal to 7. y == w is TRUE because both objects store the value 5. Notice == (two equals signs) is a comparison, while &lt;- and a single = are used for assignment. Mixing these up is one of the most common beginner mistakes in R.",
+    "text": "Equality\nThe simplest logical test is an equality check. To check if two objects are equal, we use the equality operator, ==.\n\n1 == 1\n\n[1] TRUE\n\n\"a\" == \"a\"\n\n[1] TRUE\n\n\"foo\" == \"bar\"\n\n[1] FALSE\n\n\n\n\n\n\n\n\nCommon Mistakes\n\n\n\nNotice that the equality test operator, ==, is two equals signs. Remember that a single equals sign is one of the possible assignment operators. You cannot use a single equals sign to do a logical comparison.\n\n2 = 3\n\nError in `2 = 3`:\n! invalid (do_set) left-hand side to assignment\n\n\nMixing up == and = is one of the most common beginner mistakes (and experienced user typos) in R.\n\n\nPredict: What will the following lines print?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nExplanation\n\n\n\n\n\n\ny == x is FALSE because 5 is not equal to 7.\ny == w is TRUE because 5 is equal to 5.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
@@ -994,7 +994,7 @@
     "href": "tutorials/basic_commands/logical_comparisons.html#logical-negation",
     "title": "Logical Comparisons",
     "section": "Logical Negation",
-    "text": "Logical Negation\nWe can negate any logical condition by prepending the ! character.\n\ny &gt; x\n\n[1] FALSE\n\n!y &gt; x\n\n[1] TRUE\n\ny == w\n\n[1] TRUE\n\n!y == w\n\n[1] FALSE\n\n\nRather than negating an equality check, we will typically use the special “not-equal” operator, !=.\n\ny == w\n\n[1] TRUE\n\ny != w\n\n[1] FALSE",
+    "text": "Logical Negation\nWe can negate any logical condition (i.e., change TRUE to FALSE and visa-versa) by prepending the ! character.\n\n!TRUE\n\n[1] FALSE\n\n!FALSE\n\n[1] TRUE\n\ny &gt; x\n\n[1] FALSE\n\n!y &gt; x\n\n[1] TRUE\n\n\nPredict: What will the following two lines print?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nExplanation\n\n\n\n\n\n\ny == w is TRUE because 5 is equal to 5.\n!y == w is FALSE because we’ve negated the result of the equality test.\n\n\n\n\nRather than negating an equality check, we will typically use the special “not-equal” operator, !=.\n\ny == w\n\n[1] TRUE\n\ny != w\n\n[1] FALSE",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
@@ -1006,7 +1006,7 @@
     "href": "tutorials/basic_commands/logical_comparisons.html#combining-conditions",
     "title": "Logical Comparisons",
     "section": "Combining Conditions",
-    "text": "Combining Conditions\nWe can create more complex logical conditions with the AND and OR operators: & and |.\n\ny == w & y &lt; x\n\n[1] TRUE\n\ny == w & y &gt; x\n\n[1] FALSE\n\ny == w | y &gt; x\n\n[1] TRUE\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse a single line of code to generate a logical value (i.e., TRUE/FALSE) indicating if the value of the weeks object you created earlier is evenly divisible by 7.\n\n Interactive Editor Hint Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nUse x %% 7 to calculate the remainder after dividing x by 7.\nIf you’re getting unexpected results, consider using parentheses to ensure the intended order of operations.\nIn R, the modulo operator, %%, takes precedence over arithmetic operations like multiplication.\n\n\n\n\n(weeks %% 7) == 0\n\n[1] FALSE\n\n\nIf the remainder of dividing weeks by 7 is zero, we know that the value of weeks is evenly divisible by 7.",
+    "text": "Combining Conditions\nWe can create more complex logical conditions with the AND and OR operators: & and |.\n\n# Is y equal to w AND is y less than x?\ny == w & y &lt; x\n\n[1] TRUE\n\n# Is y equal to w AND is y greater than x?\ny == w & y &gt; x\n\n[1] FALSE\n\n# Is y equal to w OR is y greater than x?\ny == w | y &gt; x\n\n[1] TRUE\n\n\nPredict: What will the following lines print?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nExplanation\n\n\n\n\n\n\nFALSE because y is not both equal to itself and not equal to itself.\nFALSE because w is neither greater than itself nor less than itself.\nTRUE because x is not greater than itself, but x is less than or equal to itself.\nTRUE because x is both greater than or equal to itself and x is less than or equal to itself.\n\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\nUse a single line of code to generate a logical answer (i.e., TRUE/FALSE) to the following question.\n\nIs the sum of the current day and the current month strictly greater than the two-digit year?\n\nUse numeric representations of the day, month, and year.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\nLet’s assume the current date is 25-08-2026. Then, today’s solution would be the following.\n\n(25 + 8) &gt; 26\n\n[1] TRUE\n\n\nIn R, most mathematical operators take precedence over logical tests. So, the parentheses in the solution are not strictly necessary.\n\n25 + 8 &gt; 26\n\n[1] TRUE\n\n\nThat being said, the parentheses are still a good idea. In this case, the extra parentheses clarify exactly what we’re testing, and less ambiguity is almost always a good thing.\n\n\n\n\n\n\n\n\n\n\n\nKnowledge Check\n\n\n\n\nWhat’s the difference between = and == in R?\nIf a &lt;- 3 and b &lt;- 4, what does a != b return?\nWrite an expression that checks whether a is greater than 1 and less than 10.\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
@@ -1334,7 +1334,7 @@
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "R Objects & Assignment"
+      "R Objects"
     ]
   },
   {
@@ -1358,7 +1358,7 @@
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "R Objects & Assignment"
+      "R Objects"
     ]
   },
   {
@@ -1366,11 +1366,11 @@
     "href": "tutorials/basic_commands/objects.html#assigning-existing-objects",
     "title": "R Objects & Assignment",
     "section": "Assigning Existing Objects",
-    "text": "Assigning Existing Objects\nIn real-world data analysis, we rarely create objects by directly assigning single numbers. Typically, we create objects by manipulating existing objects and assigning the manipulated version to a new name. Fortunately, R is perfectly happy to create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] 5\n\nz\n\n[1] 5\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWhen we create w in the code above, we are not replacing z with w: we’re making a copy of z and calling that copy w. So, both w and z are still available (otherwise we wouldn’t be able to print the value of z). In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind when you’re working with larger datasets, because you can quickly flood your memory with unnecessary copies of your data, if you’re not careful.\n\n\n\n\n\n\n\n\nPractice\n\n\n\nGiven the objects defined above (x = 2.5, y = 7, z = 5), predict the value of each expression before running it.\n\nz + y\nz * x\nz - y\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nz + y\n\n[1] 12\n\nz * x\n\n[1] 12.5\n\nz - y\n\n[1] -2\n\n\nNotice that R does not interpret the letters x, y, z as text. Instead, it uses whatever value is currently stored in each object when doing the calculations. If you assign different values to x, y, or z, these same three lines would produce entirely different answers. Try it for yourself.\nIn the following code block, replace the ? with a new value for z, and rerun the expressions.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNotice how each line now produces a different result, even though you didn’t change anything about the expressions, themselves. This paradigm is one of the most useful properties of programmatic data analysis. By changing the values stored in the relevant objects (e.g., by loading a different dataset), you can reuse the same code to re-run the same calculation on different data.",
+    "text": "Assigning Existing Objects\nIn real-world data analysis, we rarely create objects by directly assigning single numbers. Typically, we create objects by manipulating existing objects and assigning the manipulated version to a new name. Fortunately, R is perfectly happy to create new objects by assigning them the values of existing objects.\nThe following code creates a new object, w, that takes the value of the existing object z. When we print the value of w, you can see that it has the same value as z.\n\nw &lt;- z\nw\n\n[1] 5\n\nz\n\n[1] 5\n\n\n\n\n\n\n\n\nImportant\n\n\n\nWhen we create w in the code above, we are not replacing z with w: we’re making a copy of z and naming that copy w. So, both w and z are still available (otherwise we wouldn’t be able to print the value of z). In almost all cases, R will copy objects during assignment. This behavior is good to keep in mind as you progress to more complicated projects. If you’re not careful, your environment can quickly become cluttered with unused copies of old objects.\n\n\n\n\n\n\n\n\nPractice\n\n\n\nGiven the objects defined above (x &lt;- 2.5, y &lt;- 7, z &lt;- 5), predict the value of each expression before running it.\n\nz + y\nz * x\nz - y\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nz + y\n\n[1] 12\n\nz * x\n\n[1] 12.5\n\nz - y\n\n[1] -2\n\n\nNotice that R does not interpret the letters x, y, z as text. Instead, it uses whatever value is currently stored in each object when doing the calculations. If you assign different values to x, y, or z, these same three lines would produce entirely different answers. Try it for yourself.\nIn the following code block, replace the ? with a new value for z, and rerun the expressions.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nNotice how each line now produces a different result, even though you didn’t change anything about the expressions, themselves. This paradigm is one of the most useful properties of programmatic data analysis. By changing the values stored in the relevant objects (e.g., by loading a different dataset), you can reuse the same code to re-run the same calculation on different data.\n\n\n\n\n\n\n\n\n\n\n\nCommon Mistakes\n\n\n\nEven though we name objects with words, R has different ways of handling named objects and character strings.\n\nWe use quotation marks to denote a character string.\nWe don’t quote object names.\n\nIf we run foo &lt;- \"bar\", foo is an object that stores the character string \"bar\". We need to be careful with what we quote: foo and \"foo\" are completely different entities. Most quotation-based mistakes fall into one of two classes.\nMistake 1: We forget the quotation marks when trying to define a character string.\n\n# We want to assign the character string \"bar\" to the object foo\nfoo &lt;- bar\n\nError:\n! object 'bar' not found\n\n\nSince we didn’t quote the value on the right-hand-side of the assignment operator, R will try to find an object called bar and assign its contents to foo. Since, bar doesn’t exist, we get an error.\nMistake 2: We quote an objects name.\n\nalice &lt;- 42\nbob &lt;- 1984\n\n# We want to add the values stored in the objects alice an bob\nalice + \"bob\"\n\nError in `alice + \"bob\"`:\n! non-numeric argument to binary operator\n\n\nIn this case, we should have written alice + bob. Both alice and bob exist as objects that store numeric values, but \"bob\" is just a character string that has no relation to the object bob. So, R tries to add the value stored in alice (i.e., 42) to the string-literal \"bob\" and fails.",
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "R Objects & Assignment"
+      "R Objects"
     ]
   },
   {
@@ -1382,7 +1382,55 @@
     "crumbs": [
       "Open-Stat-Prog",
       "Tutorial",
-      "R Objects & Assignment"
+      "R Objects"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/logical_comparisons.html#greater-than-less-than",
+    "href": "tutorials/basic_commands/logical_comparisons.html#greater-than-less-than",
+    "title": "Logical Comparisons",
+    "section": "Greater-Than & Less-Than",
+    "text": "Greater-Than & Less-Than\nWe can also check the usual greater-than/less-than conditions with &gt;, &lt;, &gt;=, &lt;=.\n\n# Is y greater than x?\ny &gt; x\n\n[1] FALSE\n\n# Is y greater than or equal to x?\ny &gt;= x\n\n[1] FALSE\n\n# Is y less than x?\ny &lt; x  # less than\n\n[1] TRUE\n\n# Is y less than or equal to x?\ny &lt;= x # less than or equal to\n\n[1] TRUE\n\n\n\n\n\n\n\n\nPractice\n\n\n\nGiven y &lt;- 5 and w &lt;- 5, predict what value each of the following expressions will return.\n\ny &gt; w\ny &gt;= w\ny &lt; w\ny &lt;= w\n\nUse the interactive editor to check your predictions.\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\ny &gt; w\n\n[1] FALSE\n\ny &gt;= w\n\n[1] TRUE\n\ny &lt; w\n\n[1] FALSE\n\ny &lt;= w\n\n[1] TRUE\n\n\ny and w store the same value, so:\n\ny &gt; w and y &lt; w are both FALSE, since neither is strictly greater or less than the other.\ny &gt;= w and y &lt;= w are both TRUE, since “greater than or equal to” and “less than or equal to” are satisfied whenever the values are equal.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "Logical Comparisons"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/comments.html#why-use-comments",
+    "href": "tutorials/basic_commands/comments.html#why-use-comments",
+    "title": "Comments",
+    "section": "Why Use Comments?",
+    "text": "Why Use Comments?\nComments have two primary uses.\nUse 1: Leaving short, explanatory notes to yourself (or to anyone else reading your code) about why a particular line does what it does.\n\n# Add 2 and 2\n2 + 2\n\n[1] 4\n\n\nUse 2: Temporarily disabling parts of your code that you don’t want to completely remove (e.g., for debugging).\nFor example, in the following code, I’m trying to accomplish a few things.\n\nGenerate a \\(25 \\times 4\\) matrix of standard normal deviates\nStore this matrix as an object named x.\nCompute the eigenvalue decomposition of x.\nCalculate the covariance matrix of x.\n\nDo: Run the following code, and see what happens.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nOops…something breaks when trying to compute the eigenvalue decomposition. We’ll assume I need that result, so I don’t want to simply remove the broken line. If I’m not willing or able to fix the issue immediately, I can comment out the offending command and proceed with my work. Try it for yourself.\nDo: In the interactive editor above, try commenting out the line xEigen &lt;- eigen(x) and rerunning the code.\nSee: Hopefully, the code now runs. As an added benefit, the commented line acts as a marker of the bug I need to fix in the future.\n\n\n\n\n\n\nKnowledge Check\n\n\n\nPredict: What will the following code print?\n\n5 + 5\n# 5 - 5\n5 * 5\n\nUse the interactive editor to check your predictions.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "Comments"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/environments.html#the-global-environment",
+    "href": "tutorials/basic_commands/environments.html#the-global-environment",
+    "title": "Environments",
+    "section": "The Global Environment",
+    "text": "The Global Environment\nThe global environment is the highest-level environment that R maintains. This environment contains all of the objects you define in your R session. Whenever you create a new object (as you’ve been doing throughout this module), that object lives in the global environment.\n\n\n\n\n\n\nNote\n\n\n\nSince the global environment is the one you’ll interact with most frequently, its often treated as the default environment when economizing language (i.e., being lazy).\n\nIn these tutorials, whenever we refer to “the environment”, “your current environment”, “your R session”, or some variation of those terms, we’re talking about the global environment.\nThe Environment tab in RStudio shows the contents of the global environment, by default.\nThe interactions described below all interface with the global environment, by default.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "Environments"
+    ]
+  },
+  {
+    "objectID": "tutorials/basic_commands/environments.html#interacting-with-the-global-environment",
+    "href": "tutorials/basic_commands/environments.html#interacting-with-the-global-environment",
+    "title": "Environments",
+    "section": "Interacting with the (Global) Environment",
+    "text": "Interacting with the (Global) Environment\nWe can use the ls() function to list the contents of the current environment.\n\nls()\n\ncharacter(0)\n\n\nIn this case, the environment is empty because we haven’t yet defined any objects.\nDo: Run the following code to add some objects to the current environment.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nDo: Use the interactive editor below to run the ls() function. What do you see?\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nYou should now see a listing of all the objects you just created. Remember: whenever we create a new object, we’re storing that object in the global environment.\n\n\n\nThe rm() function will remove an object from the environment.\nDo: Run the following code.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\nSee: What effect did rm(x) have?\n\n\n\n\n\n\nExplanation\n\n\n\n\n\nThe listing returned by ls() no longer shows x, because you removed x from the environment by calling rm(x).\n\n\n\n\n\n\n\n\n\nPractice\n\n\n\n\nUse the ls() function to view the contents of the environment.\nUse the rm() function to remove age from the environment.\nUse ls() to check your work.\n\n\n Interactive Editor Solution\n\n\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\n\n\nls()\n\n[1] \"age\"  \"name\" \"y\"    \"z\"   \n\nrm(age)\nls()\n\n[1] \"name\" \"y\"    \"z\"   \n\n\n\n\n\n\n\n\n\n\n\n\n\nReady to Continue?\n\n\n\nYou’re ready to move on to R Functions if you can:\n\nRun a simple calculation in R.\nWrite a simple R expression using at least one arithmetic or logical operator.\nExplain what a comment does, and write one yourself.\n\nIf any of these still feel shaky, that’s completely fine, revisit the relevant page above before continuing, or try the Knowledge Quiz to see exactly where to focus.",
+    "crumbs": [
+      "Open-Stat-Prog",
+      "Tutorial",
+      "Environments"
     ]
   }
 ]

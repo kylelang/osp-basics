@@ -2,16 +2,6 @@
 title: "Environments"
 ---
 
-::: {.callout-note}
-
-## Optional Topic
-
-This page is a bonus topic. You don't need to master environments to move on to the next tutorial on [R Functions](/tutorials/functions/index.qmd).
-
-:::
-
-## What is an "Environment"
-
 ::: {.column-margin}
 
 :::: reading-advanced
@@ -22,48 +12,87 @@ This page is a bonus topic. You don't need to master environments to move on to 
 
 :::
 
-Every R command is executed in a particular *environment*. Conceptually, you can think of R environments as collections of the objects that R currently has stored in working memory. At this point, you only need to consider one of R's several
-types of environment: the *Global Environment*.
+Every R command is executed in a particular *environment*. Conceptually, you can think of R environments as collections
+of the objects that R currently has stored in working memory. For most day-to-day R usage, you only need to consider one
+of R's several types of environment: the *Global Environment*.
 
-### Global Environment
+## The Global Environment
 
-The global environment is the highest-level environment that R maintains. This environment contains all of the objects you define in your R session. The interactions described below all interface with the global environment. The *Environment* tab in RStudio shows the contents of the global environment, by default.
+The global environment is the highest-level environment that R maintains. This environment contains all of the objects
+you define in your R session. Whenever you create a new object (as you've been doing throughout this module), that
+object lives in the global environment.
 
-## Interacting with the Environment
+::: {.callout-note}
+
+Since the global environment is the one you'll interact with most frequently, its often treated as the default
+environment when economizing language (i.e., being lazy).
+
+- In these tutorials, whenever we refer to "the environment", "your current environment", "your R session", or some
+variation of those terms, we're talking about the global environment.
+- The *Environment* tab in RStudio shows the contents of the global environment, by default.
+- The interactions described below all interface with the global environment, by default.
+
+:::
+
+## Interacting with the (Global) Environment
 
 We can use the `ls()` function to list the contents of the current environment.
 
 ```{r}
-## The environment is empty because we haven't defined any objects
 ls()
+```
 
-## Create some objects
+In this case, the environment is empty because we haven't yet defined any objects.
+
+**Do:** Run the following code to add some objects to the current environment.
+
+```{webr-r}
+# Create some objects
 x <- 7
 y <- 8
 z <- 9
 name <- "bob"
 age <- 38
+```
 
-## View the updated contents of the environment
+**Do:** Use the interactive editor below to run the `ls()` function. What do you see?
+
+```{webr-r}
 ls()
 ```
 
-The `rm()` function will remove an object from the environment. The following code will remove `x` from the environment.
+::: explanation
 
-```{r}
-rm(x) # Remove 'x' from the environment
-ls()  # Check the results
+You should now see a listing of all the objects you just created. Remember: whenever we create a new object, we're
+storing that object in the global environment.
+
+:::
+
+The `rm()` function will remove an object from the environment.
+
+**Do:** Run the following code.
+
+```{webr-r}
+rm(x)
+ls()
 ```
 
-::: practice
+**See:** What effect did `rm(x)` have?
 
-## Practice
+::: explanation
+
+The listing returned by `ls()` no longer shows `x`, because you removed `x` from the environment by calling `rm(x)`.
+
+:::
+
+::: practice
 
 1. Use the `ls()` function to view the contents of the environment.
 1. Use the `rm()` function to remove `age` from the environment.
 1. Use `ls()` to check your work.
 
 :::: {.panel-tabset}
+
 ## {{< var tab_title.editor >}}
 
 ```{webr-r}
@@ -81,10 +110,20 @@ age <- 38
 ## {{< var tab_title.solution >}}
 
 ```{r}
+#| include: FALSE
+
+y <- 8
+z <- 9
+name <- "bob"
+age <- 38
+```
+
+```{r}
 ls()
 rm(age)
 ls()
 ```
+
 ::::
 
 :::
@@ -95,11 +134,11 @@ ls()
 
 You're ready to move on to [R Functions](/tutorials/functions/index.qmd) if you can:
 
-- Run a calculation in R.
-- Interpret the printed output of an R command.
+- Run a simple calculation in R.
 - Write a simple R expression using at least one arithmetic or logical operator.
 - Explain what a comment does, and write one yourself.
 
-If any of these still feel shaky, that's completely fine, revisit the relevant page above before continuing, or try the [Knowledge Quiz](/quizzes/basic_commands/index.qmd) to see exactly where to focus.
+If any of these still feel shaky, that's completely fine, revisit the relevant page above before continuing, or try the
+[Knowledge Quiz](/quizzes/basic_commands/index.qmd) to see exactly where to focus.
 
 :::

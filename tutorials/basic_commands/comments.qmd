@@ -12,34 +12,95 @@ title: "Comments"
 
 :::
 
-This is a short one. The comment character in R is `#`. Each commented line must be preceded by a `#` symbol. There are no block comments in R. Comments are not evaluated when you run your code. R simply ignores anything after a `#` on a given line.
+Like any sensible programming language, R allows us to include comments in our code. The comment character in R is `#`.
+Each line preceded by at least one `#` symbol will be interpreted as a comment. Comments are not evaluated when you run
+your code. R simply ignores anything after the `#` character.
 
-**Do:** run the following R code to generate two integer vectors and print the results.
+```{r}
+# This is a comment, not code
+1 + 1
+
+2^2 # first three characters on this line are code; the rest is a comment
+```
+
+**Do:** Run the following code to generate two integer vectors and print the results.
 
 ```{webr-r}
 1:10
 2:8
 ```
 
-**Predict:** what do you expect to happen if you put a `#` in front of the first line below, then run the code?
+**Predict:** What will the following lines print?
 
 ```{webr-r}
-#1:10
+# 1:10
 2:8
 ```
 
-**Explain:** in the code above, the expression `1:10` is "commented out", so R doesn't evaluate that line at all. Instead, it's treated as plain text, not code. So, running the code only prints the second vector, `2:8`.
+::: explanation
 
-Comments are mainly useful for leaving short notes to yourself (or to anyone else reading your code) about *why* a particular line does what it does. You've already seen several examples of this throughout this module, e.g.:
+In the code above, the expression `1:10` is "commented out", so R doesn't evaluate that line at all. Consequently,
+running the code only prints the result of the second expression, `2:8`.
+
+:::
+
+There are no block comments in R. So, you need to add a `#` character before every line when you want to create
+multi-line comments.
 
 ```{r}
-## Add 2 and 2
+# This is a really long-winded explanation of exactly why the following is
+# such a very super-duper awesome way of doing this thing that I'm trying to
+# do here, because I'm a special little teapot, and I've got the very best
+# ideas, and you really, really need to know about them.
+x <- 1
+y <- 1
+z <- x + y
+z
+```
+
+## Why Use Comments?
+
+Comments have two primary uses.
+
+**Use 1:** Leaving short, explanatory notes to yourself (or to anyone else reading your code) about *why* a particular
+line does what it does.
+
+```{r}
+# Add 2 and 2
 2 + 2
 ```
 
-## Quick Check
+**Use 2:** Temporarily disabling parts of your code that you don't want to completely remove (e.g., for debugging).
 
-What will the following code print? Predict first, then check your answer in the editor.
+For example, in the following code, I'm trying to accomplish a few things.
+
+1. Generate a $25 \times 4$ matrix of standard normal deviates
+1. Store this matrix as an object named `x`.
+1. Compute the eigenvalue decomposition of `x`.
+1. Calculate the covariance matrix of `x`.
+
+**Do:** Run the following code, and see what happens.
+
+```{webr-r}
+x <- matrix(rnorm(100), ncol = 4)
+
+xEigen <- eigen(x)
+
+cor(x)
+```
+
+Oops...something breaks when trying to compute the eigenvalue decomposition. We'll assume I need that result, so I don't
+want to simply remove the broken line. If I'm not willing or able to fix the issue immediately, I can comment out the
+offending command and proceed with my work. Try it for yourself.
+
+**Do:** In the interactive editor above, try commenting out the line `xEigen <- eigen(x)` and rerunning the code. 
+
+**See:** Hopefully, the code now runs. As an added benefit, the commented line acts as a marker of the bug I need to fix
+in the future.
+
+::: knowledge-check
+
+**Predict:** What will the following code print?
 
 ```{r, eval = FALSE}
 5 + 5
@@ -47,5 +108,9 @@ What will the following code print? Predict first, then check your answer in the
 5 * 5
 ```
 
+Use the interactive editor to check your predictions.
+
 ```{webr-r}
 ```
+
+:::

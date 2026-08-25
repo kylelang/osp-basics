@@ -179,16 +179,16 @@ z
 
 ::: {.callout-important}
 
-When we create `w` in the code above, we are not replacing `z` with `w`: we're making a copy of `z` and calling that
-copy `w`. So, both `w` and `z` are still available (otherwise we wouldn't be able to print the value of `z`). In almost
-all cases, R will copy objects during assignment. This behavior is good to keep in mind when you're working with larger
-datasets, because you can quickly flood your memory with unnecessary copies of your data, if you're not careful.
+When we create `w` in the code above, we are not replacing `z` with `w`: we're making a copy of `z` and naming that copy
+`w`. So, both `w` and `z` are still available (otherwise we wouldn't be able to print the value of `z`). In almost all
+cases, R will copy objects during assignment. This behavior is good to keep in mind as you progress to more complicated
+projects. If you're not careful, your environment can quickly become cluttered with unused copies of old objects.
 
 :::
 
 ::: practice
 
-Given the objects defined above (`x = 2.5`, `y = 7`, `z = 5`), predict the value of each expression *before* running
+Given the objects defined above (`x <- 2.5`, `y <- 7`, `z <- 5`), predict the value of each expression *before* running
 it.
 
 ```{r}
@@ -234,6 +234,47 @@ stored in the relevant objects (e.g., by loading a different dataset), you can r
 calculation on different data.
 
 ::::
+
+:::
+
+::: common-mistakes
+
+Even though we name objects with words, R has different ways of handling named objects and character strings.
+
+- We use quotation marks to denote a character string.
+- We don't quote object names.
+
+If we run `foo <- "bar"`, `foo` is an object that stores the character string `"bar"`. We need to be careful with what
+we quote: `foo` and `"foo"` are completely different entities. Most quotation-based mistakes fall into one of two
+classes.
+
+**Mistake 1:** We forget the quotation marks when trying to define a character string.
+
+```{r}
+#| error: TRUE
+
+# We want to assign the character string "bar" to the object foo
+foo <- bar
+```
+
+Since we didn't quote the value on the right-hand-side of the assignment operator, R will try to find an object called
+`bar` and assign its contents to `foo`. Since, `bar` doesn't exist, we get an error.
+
+**Mistake 2:** We quote an objects name.
+
+```{r}
+#| error: TRUE
+
+alice <- 42
+bob <- 1984
+
+# We want to add the values stored in the objects alice an bob
+alice + "bob"
+```
+
+In this case, we should have written `alice + bob`. Both `alice` and `bob` exist as objects that store numeric values,
+but `"bob"` is just a character string that has no relation to the object `bob`. So, R tries to add the value stored in
+`alice` (i.e., `r alice`) to the string-literal `"bob"` and fails.
 
 :::
 
