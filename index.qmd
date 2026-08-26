@@ -1,5 +1,5 @@
 ---
-title: "Module Template"
+title: "Basic Commands"
 page-navigation: false
 format:
   html: 
@@ -10,33 +10,33 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-Welcome to our template module. Every module comprises a series of topical *tutorials*, such as the three linked below.
+::: {.column-margin}
 
-1. [First Topic](/tutorials/first_tutorial/index.qmd)
-1. [Second Topic](/tutorials/second_tutorial/index.qmd)
+:::: completion-time
 
-Each tutorial will comprise a series of interactive lessons with practice problems embedded throughout. Each tutorial
-section should be wrapped up with a knowledge quiz.
+**About 45-60 minutes**, including practice exercises and knowledge quiz.
+
+::::
+
+:::
+
+Welcome to the *Basic Commands* module. In this module, you will take the first steps in your R programming journey by
+learning the basics commands that underlie all R usage.
 
 ## Learning Goals
 
 After completing this module, you will be able to:
 
-### Tutorial 1
+1. Use R to conduct simple mathematical calculations
+1. Create simple R objects
+1. Conduct simple mathematical calculations involving R objects
+1. Conduct simple logical comparisons between R objects
+1. Use comments in your code
 
-1. A thing you should learn from Tutorial 1.
-1. Another thing you should learn from Tutorial 1.
-1. One more thing you should learn From Tutorial 1.
-
-### Tutorial 2
-
-1. A thing you should learn from Tutorial 2.
-1. Another thing you should learn from Tutorial 2.
-
-Click the button below to get started with the first tutorial.
+Click the button below to get started.
 
 ```{r}
 #| echo: false
 #| results: asis
-begin_button("/tutorials/first_tutorial/index.html")
+begin_button("/tutorials/basic_commands/index.qmd")
 ```

@@ -1,0 +1,235 @@
+---
+title: "Arithmetic"
+---
+
+## R as a Calculator
+
+::: {.column-margin}
+
+:::: reading
+
+[R4DS 2.1: Coding Basics](https://r4ds.hadley.nz/workflow-basics.html#coding-basics)
+
+::::
+
+:::
+
+At its simplest, R is a very over-powered pocket calculator. Run the code below (click the small "Run Code" button, or
+press `Ctrl`/`Cmd` + `Enter`) and look at the output.
+
+```{webr-r}
+2 + 2
+```
+
+Congratulations! Assuming you saw the answer `4`, you've successfully used R to sum 2 and 2.
+
+::: practice
+
+Using the interactive editor below, add your birth day to your birth month.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Since I was born on 26 August, my solution would be the following.
+
+```{r}
+26 + 8
+```
+
+::::
+
+:::
+
+In R, the four basic arithmetic operators all behave the way you'd expect.
+
+```{r}
+# Add 2 and 2
+2 + 2
+
+# Subtract 6 from 14
+14 - 6
+
+# Multiply 3 and 4
+3 * 4
+
+# Divide 225 by 15
+225 / 15
+```
+
+::: practice
+
+Before running any code, **predict** what value each of the following expressions will produce, *then* use the
+interactive editor to run the code and check your predictions.
+
+```{r, eval = FALSE}
+10 - 3
+4 * 4
+100 / 4
+```
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+10 - 3
+4 * 4
+100 / 4
+```
+
+If your predictions matched, great! You've already got the core idea. If not, that's completely fine. Notice *which*
+line surprised you, make sure you correctly identified the arithmetic operator involved, and try to work out where your
+prediction went wrong.
+
+::::
+
+:::
+
+Now let's use these same tools to solve a slightly more complex problem.
+
+::: practice
+
+1. Calculate the number of whole days left in the current month.
+1. Calculate the number of weeks left in the month.
+   - Account for partial weeks with a decimal-valued answer.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+At time-of-writing, it's 21 August. Since August has 31 days, we get 31 - 21 = 10 days remaining in the month.
+
+```{r}
+31 - 21
+```
+
+To find the number of remaining weeks, we simply divide the answer from above by 7.
+
+```{r}
+10 / 7
+```
+
+::::
+
+:::
+
+## Order of Operations
+
+When parsing your commands, R will, mostly, scan each line of code from left to right and apply each mathematical
+operation according to the usual PEMDAS ordering (**P**arentheses, **E**xponents, **M**ultiplication/**D**ivision,
+**A**ddition/**S**ubtraction).
+
+**Do:** Run the following two lines of code and compare their results.
+
+```{webr-r}
+3 + 4 / 2
+(3 + 4) / 2
+```
+
+**See:** Notice that the two lines produce different answers, even though they use the same three numbers and the same
+three operators. Why?
+
+- In the first line, R first divides `4` by `2`, and *then* adds `3` to the result.
+- In the second line, the parentheses force R to first add `3` to `4`, and only *then* divide the result by `2`.
+
+Parentheses are your most reliable tool for controlling order of operations. When in doubt, add parentheses. They never
+hurt, and they make your intent explicit both to R and to anyone (including future-you) reading the code.
+
+::: practice
+
+Why do the following two expressions produce different answers?
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.question >}}
+
+```{r}
+(3 + 4 - 2) * (10 - 7)
+3 + 4 - 2 * 10 - 7
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+(3 + 4 - 2) * (10 - 7)
+```
+
+In the first case, we've used parentheses to group the two blocks of addition/subtraction $(3 + 4 - 2 = 5)$ and $(10 - 7
+= 3)$. We then multiply those results $(5 \times 3 = 15)$.
+
+```{r}
+3 + 4 - 2 * 10 - 7
+```
+
+In the second case, we rely on R's rules for operator precedence, so the multiplication $(2 \times 10 = 20)$ is done
+first. Then we do the addition/subtraction $(3 + 4 - 20 - 7 = -20)$.
+
+::::
+
+:::
+
+Now that you're aware of R's rules for operator precedence, let's revisit the birth day/month problem from above.
+
+::: practice
+
+Use a single line of code to complete the following calculations.
+
+1. Calculate the number of whole days left in the current month.
+1. Calculate the number of weeks left in the month.
+   - Account for partial weeks with a decimal-valued answer.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+The calculation is the same as last time, but now we can combine the remaining days difference and the remaining weeks
+division into one expression.
+
+```{r}
+(31 - 21) / 7
+```
+
+Note the use of parentheses to ensure that we compute the number of remaining days *before* doing any division.
+
+::::
+
+:::
+
+::: knowledge-check
+
+Would the following two expressions produce the same result?
+
+```{r}
+#| eval: FALSE
+
+(3 * 4) - (10 / 2)
+3 * 4 - 10 / 2
+```
+
+Use the interactive editor below to check your prediction.
+
+```{webr-r}
+```
+
+:::

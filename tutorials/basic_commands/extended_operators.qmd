@@ -1,0 +1,185 @@
+---
+title: "Additional Mathematical Operators"
+---
+
+Now that you're comfortable with the four basic arithmetic operators, we can extend your toolkit with a few additional,
+commonly encountered mathematical operators. You don't need to memorize all of these today, treat this page as a
+reference to which you can return.
+
+```{r}
+# Define three objects to use in the following examples
+x <- 2.5
+y <- 7
+z <- 5
+```
+
+```{webr-r}
+#| context: "setup"
+
+x <- 2.5
+y <- 7
+z <- 5
+```
+
+## Powers & Roots
+
+We use the caret character, `^`, to specify exponents. For example, the following code will square and cube the value of
+`y`.
+
+```{r}
+y^2
+y^3
+```
+
+The `sqrt()` function returns the square root of its argument (i.e., the value we specify inside the parentheses). The
+following code calculates the square root of `y`.
+
+::: {.column-margin}
+
+:::: {.callout-note}
+
+Don't worry about exactly what we mean by a *function*, just yet. You'll learn all about those in the [**R
+Functions**](https://openstatprog.com/functions/index.html) module.
+
+::::
+
+:::
+
+```{r}
+sqrt(y)
+```
+
+For other roots, we can use fractional exponents.
+
+```{r}
+# Cute root of y
+y^(1 / 3)
+
+# Quartic root of y
+y^(1 / 4)
+```
+
+## Other Common Operators
+
+R also includes many special functions for the most common mathematical operations.
+
+```{r}
+# Natural logarithm of 'y'
+log(y)
+
+# Base-10 logarithm of 'y'
+log10(y)
+
+# Base-2 logarithm of 'y'
+log2(y)
+
+# Exponentiate 'x'
+exp(x)
+
+# Modulo: Remainder after dividing 'y' by 'x'
+y %% x
+
+foo <- -3.14159
+
+# Round 'foo' to 3 decimal places
+round(foo, 3)
+
+# Round 'foo' down to the nearest whole number
+floor(foo)
+
+# Round 'foo' up to the nearest whole number
+ceiling(foo)
+
+# Absolute value of 'foo'
+abs(foo)
+```
+
+::: {.column-margin}
+
+:::: {.callout-note}
+
+Note that `log(y)` calculates the *natural logarithm* of `y`, $\ln(y)$. If you want the "ordinary" base-10 log, you need
+to use the `log10()` function.
+
+::::
+
+:::
+
+::: practice
+
+## Practice
+
+1. Create an object called `age` that takes the value of your age in whole years.
+1. Use the `age` object you created above to create a second object called `weeks` that takes the value of your age
+in whole weeks.
+   - Assume 52 weeks in each year.
+   - Disregard partial years (i.e., assume every year counted in `age` contains 52 whole weeks).
+1. Print the value of `weeks`.
+1. Use the modulo operator, `%%`, to check whether `weeks` is evenly divisible by 4.
+
+:::: {.panel-tabset}
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.hint >}}
+
+For step 4, remember that `a %% b` returns the remainder after dividing `a` by `b`. A value is evenly divisible by `b`
+whenever that remainder is `0`.
+
+## {{< var tab_title.solution >}}
+
+At time-of-writing, I'm 40 years old. So, these would be my `age` and `weeks` objects.
+
+```{r}
+age   <- 40
+weeks <- 40 * 52
+weeks
+```
+
+To see if my `weeks` value is evenly divisible by 4, I'll apply the modulo operator.
+
+```{r}
+weeks %% 4
+```
+
+```{r}
+#| include: FALSE
+
+result <- ifelse(weeks %% 4 == 0, "is", "is not")
+```
+
+Since the remainder after dividing my `weeks` value by 4 `r result` equal to 0, we conclude that my `weeks` value
+`r result` evenly divisible by 4.
+
+::::
+
+:::
+
+::: knowledge-check
+
+Which function would you use to find the remainder after division?
+
+- `round()`
+- `%%`
+- `abs()`
+
+Which function would you use to always round a number *up*?
+
+- `floor()`
+- `ceiling()`
+- `round()`
+
+Which function would you use to remove the negative sign from a number, without changing its magnitude?
+
+- `sqrt()`
+- `abs()`
+- `exp()`
+
+Try each candidate function in the editor to verify your answer.
+
+```{webr-r}
+```
+
+:::

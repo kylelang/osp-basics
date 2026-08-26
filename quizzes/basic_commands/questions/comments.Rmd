@@ -1,0 +1,40 @@
+Question
+========
+
+What will the following R code print when you run it?
+
+```
+# 4 * 2
+# 4 - 2
+4 / 2
+4^2
+```
+
+Answerlist
+----------
+
+* `2` and `16`
+* `8`, `2`, `2`, and `16`
+* `0`, `0`, `2`, and `16`
+* `2`
+* An error, because the first two lines are not valid R code
+
+Solution
+========
+
+Answerlist
+----------
+
+* The lines starting with `#` are comment and are never evaluated, so R only prints the results of the last two lines.
+* Commented lines are not evaluated as R code, so no output would be printed for the first two lines.
+* Commented lines are not evaluated as R code, so no `0` would be printed.
+* Both the third and fourth lines are evaluated, so we would see two printed values.
+* A `#` character simply marks the rest of the line as a comment. These comments would not cause an error.
+
+Meta-information
+================
+
+exname: Comments
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,153 @@
+---
+title: "Environments"
+---
+
+::: going-further
+
+The information on this page is largely optional. It's good to have some awareness of R's global environment and how R
+stores the objects you create, but you can safely progress to the next module without mastering these concepts.
+
+:::
+
+::: {.column-margin}
+
+:::: reading-advanced
+
+[Advanced R: Environments](https://adv-r.hadley.nz/environments.html)
+
+::::
+
+:::
+
+Every R command is executed in a particular *environment*. Conceptually, you can think of R environments as collections
+of the objects that R currently has stored in working memory. For most day-to-day R usage, you only need to consider one
+of R's several types of environment: the *Global Environment*.
+
+## The Global Environment
+
+The global environment is the highest-level environment that R maintains. This environment contains all of the objects
+you define in your R session. Whenever you create a new object (as you've been doing throughout this module), that
+object lives in the global environment.
+
+::: {.callout-note}
+
+Since the global environment is the one you'll interact with most frequently, its often treated as the default
+environment when economizing language (i.e., being lazy) or picking software defaults.
+
+- In these tutorials, whenever we refer to "the environment", "your current environment", "your R session", or some
+variation of those terms, we're talking about the global environment.
+- The *Environment* tab in RStudio shows the contents of the global environment, by default.
+- The interactions described below all interface with the global environment, by default.
+
+:::
+
+## Interacting with the (Global) Environment
+
+We can use the `ls()` function to list the contents of the current environment.
+
+```{r}
+ls()
+```
+
+In this case, the environment is empty because we haven't yet defined any objects.
+
+**Do:** Run the following code to add some objects to the current environment.
+
+```{webr-r}
+x <- 7
+y <- 8
+z <- 9
+name <- "bob"
+age <- 38
+```
+
+**Do:** Use the interactive editor below to run the `ls()` function. What do you see?
+
+```{webr-r}
+ls()
+```
+
+::: explanation
+
+You should now see a listing of all the objects you just created. Remember: whenever we create a new object, we're
+storing that object in the global environment.
+
+:::
+
+The `rm()` function will remove an object from the environment.
+
+**Do:** Run the following code.
+
+```{webr-r}
+rm(x)
+ls()
+```
+
+**See:** What effect did `rm(x)` have?
+
+::: explanation
+
+The listing returned by `ls()` no longer shows `x`, because you removed `x` from the environment by calling `rm(x)`.
+
+:::
+
+::: practice
+
+1. Use the `ls()` function to view the contents of the environment.
+1. Use the `rm()` function to remove `age` from the environment.
+1. Use `ls()` to check your work.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+#| context: "setup"
+
+y <- 8
+z <- 9
+name <- "bob"
+age <- 38
+```
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+#| include: FALSE
+
+y <- 8
+z <- 9
+name <- "bob"
+age <- 38
+```
+
+```{r}
+ls()
+rm(age)
+ls()
+```
+
+::::
+
+:::
+
+::: {.callout-tip}
+
+## Ready to Continue?
+
+You're ready to progress if you can:
+
+- Run a simple calculation in R. [Relevant Section](/tutorials/basic_commands/fundamentals.qmd)
+- Create new R objects and use those objects for simple calculations. [Relevant
+Section](/tutorials/basic_commands/objects.qmd)
+- Write an expression that tests a logical condition. [Relevant Section](/tutorials/basic_commands/logical_comparisons.qmd)
+- Explain what a comment does and write one yourself. [Relevant Section](/tutorials/basic_commands/comments.qmd)
+
+If any of these concepts still feel shaky, that's completely fine. Revisit the relevant section before proceeding.
+
+Take the [Knowledge Quiz](/quizzes/basic_commands/index.qmd) to check your learning.
+
+:::

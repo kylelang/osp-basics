@@ -1,0 +1,272 @@
+---
+title: "Logical Comparisons"
+---
+
+```{r}
+#| include: FALSE
+
+y <- 5
+x <- 7
+w <- 5
+```
+
+Almost all the commands you've seen so far have been some sort of mathematical operation (e.g., adding, dividing,
+computing the natural logarithm), but R can do much more for us. *Logical comparisons* are one particularly useful class
+of operations, in which we compare objects to test logical conditions.
+
+We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value
+is `TRUE` whenever the tested condition is satisfied and `FALSE` when the tested condition is not satisfied.
+
+::: {.column-margin}
+
+:::: going-further
+
+The "logical values" we describe here are actually length-one logical vectors. You'll learn all about atomic vectors in
+the [**Vectors & Matrices**](https://openstatprog.com/vectors-matrices/index.html) module.
+
+::::
+
+:::
+
+**Do:** Run the following code to create three objects that we can use below.
+
+```{webr-r}
+#| autorun: true
+
+y <- 5
+x <- 7
+w <- 5
+```
+
+## Equality
+
+The simplest logical test is an equality check. To check if two objects are equal, we use the equality test operator,
+`==`.
+
+```{r}
+1 == 1
+"a" == "a"
+"foo" == "bar"
+```
+
+::: common-mistakes
+
+Notice that the equality test operator, `==`, is two equals signs. Remember that a single equals sign is one of the
+possible assignment operators. You cannot use a single equals sign to do a logical comparison.
+
+```{r, error = TRUE}
+2 = 3
+```
+
+Mixing up `==` and `=` is one of the most common beginner mistakes (and experienced user typos) in R.
+
+:::
+
+**Predict:** What will the following lines print?
+
+```{webr-r}
+y == x
+y == w
+```
+
+::: explanation
+
+- `y == x` is `r y == x` because `r y` *`r ifelse(y == x, "is", "is not")`* equal to `r x`.
+- `y == w` is `r y == w` because `r y` *`r ifelse(y == w, "is", "is not")`* equal to `r w`.
+
+:::
+
+## Greater-Than & Less-Than
+
+We can also check the usual greater-than/less-than conditions with `>`, `<`, `>=`, `<=`.
+
+```{r}
+# Is y greater than x?
+y > x
+
+# Is y greater than or equal to x?
+y >= x
+
+# Is y less than x?
+y < x
+
+# Is y less than or equal to x?
+y <= x
+```
+
+::: practice
+
+Given `y <- 5` and `w <- 5`, **predict** what value each of the following expressions will return.
+
+```{r, eval = FALSE}
+y > w
+y >= w
+y < w
+y <= w
+```
+
+Use the interactive editor to check your predictions.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+```{r}
+y > w
+y >= w
+y < w
+y <= w
+```
+
+`y` and `w` store the *same* value, so:
+
+- `y > w` and `y < w` are both `FALSE`, since neither is strictly greater or less than the other.
+- `y >= w` and `y <= w` are both `TRUE`, since "greater than or equal to" and "less than or equal to" are satisfied
+whenever the values are equal.
+
+::::
+
+:::
+
+## Logical Negation
+
+We can negate any logical condition (i.e., change `TRUE` to `FALSE` and visa-versa) by prepending the `!` character.
+
+```{r}
+!TRUE
+!FALSE
+
+y > x
+!y > x
+```
+
+**Predict:** What will the following two lines print?
+
+```{webr-r}
+y == w
+!y == w
+```
+
+::: explanation
+
+- `y == w` is `r y == w` because `r y` *`r ifelse(y == w, "is", "is not")`* equal to `r w`.
+- `!y == w` is `r !y == w` because we've negated the result of the equality test.
+
+:::
+
+Rather than negating an equality check, we will typically use the special "not-equal" operator, `!=`.
+
+```{r}
+y == w
+y != w
+```
+
+## Combining Conditions
+
+We can create more complex logical tests by combining multiple conditions with the AND and OR operators: `&` and `|`.
+
+Logical AND tests if all conditions are satisfied.
+
+- $A$ AND $B$ is true only when both Condition A and Condition B are satisfied.
+- $A$ AND $B$ is when Condition A, Condition B, or both are *not* satisfied.
+
+```{r}
+TRUE & TRUE
+TRUE & FALSE
+FALSE & FALSE
+```
+
+Logical OR tests if at least one condition is satisfied.
+
+- $A$ OR $B$ is true when Condition A, Condition B, or both are satisfied.
+- $A$ OR $B$ is false only when both Condition A and Condition B are *not* satisfied.
+
+```{r}
+TRUE | TRUE
+TRUE | FALSE
+FALSE | FALSE
+```
+
+To run multi-condition tests, we simply build up the desired logic by chaining together each constituent condition.
+
+```{r}
+# Is y equal to w AND is y less than x?
+y == w & y < x
+
+# Is y equal to w AND is y greater than x?
+y == w & y > x
+
+# Is y equal to w OR is y greater than x?
+y == w | y > x
+```
+
+**Predict:** What will the following lines print?
+
+```{webr-r}
+y == y & y != y
+w > w | w < w
+x > x | x <= x
+x >= x & x <= x
+```
+
+::: explanation
+
+1. `FALSE` because `y` is not both equal to itself and not equal to itself.
+1. `FALSE` because `w` is neither greater than itself nor less than itself.
+1. `TRUE` because `x` is not greater than itself, but `x` is less than or equal to itself.
+1. `TRUE` because `x` is both greater than or equal to itself and `x` is less than or equal to itself.
+
+:::
+
+::: practice
+
+Use a single line of code to generate a logical answer (i.e., `TRUE`/`FALSE`) to the following question.
+
+- Is the sum of the current day and the current month strictly greater than the two-digit year?
+
+Use numeric representations of the day, month, and year.
+
+:::: {.panel-tabset}
+
+## {{< var tab_title.editor >}}
+
+```{webr-r}
+```
+
+## {{< var tab_title.solution >}}
+
+Let's assume the current date is 25-08-2026. Then, today's solution would be the following.
+
+```{r}
+(25 + 8) > 26
+```
+
+In R, most mathematical operators take precedence over logical tests. So, the parentheses in the solution are not
+strictly necessary.
+
+```{r}
+25 + 8 > 26
+```
+
+That being said, the parentheses are still a good idea. In this case, the extra parentheses clarify exactly what we're
+testing, and less ambiguity is almost always a good thing.
+
+::::
+
+:::
+
+::: knowledge-check
+
+- What's the difference between `=` and `==` in R?
+- If `a <- 3` and `b <- 4`, what does `a != b` return?
+- Write an expression that checks whether `a` is greater than `1` *and* less than `10`.
+
+```{webr-r}
+```
+
+:::

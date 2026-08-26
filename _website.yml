@@ -1,8 +1,7 @@
 website:
+  title: "Basic Commands"
 
-  title: "OSP Module Template"
-
-  site-url: "https://www.openstatprog.com/module-template/"
+  site-url: "https://www.openstatprog.com/first-steps/"
 
   page-navigation: true
 
@@ -20,9 +19,9 @@ website:
       - icon: github
         menu:
           - text: Source Code
-            href: https://github.com/open-stat-prog/module-template
+            href: https://github.com/open-stat-prog/basics
           - text: Report a Bug
-            href: https://github.com/open-stat-prog/module-template/issues
+            href: https://github.com/open-stat-prog/basics/issues
 
   sidebar:
     style: "floating"
@@ -30,29 +29,27 @@ website:
     contents:
       - href: index.qmd
         text: "Overview"
-      - section: tutorials/first_tutorial/index.qmd
-        text: "First Tutorial"
+      - section: tutorials/basic_commands/index.qmd
+        text: "Tutorial"
         contents:
-        - href: tutorials/first_tutorial/topic1.qmd
-        - href: tutorials/first_tutorial/topic2.qmd
-        - href: tutorials/first_tutorial/topic3.qmd
-        - href: quizzes/first_tutorial/index.qmd
-          text: "Knowledge Quiz"
-      - section: tutorials/second_tutorial/index.qmd
-        text: "Second Tutorial"
-        contents:
-          - href: tutorials/second_tutorial/topic1.qmd
-          - href: tutorials/second_tutorial/topic2.qmd
-          - href: quizzes/second_tutorial/index.qmd
-            text: "Knowledge Quiz"
+          - href: tutorials/basic_commands/fundamentals.qmd
+          - href: tutorials/basic_commands/objects.qmd
+            text: "R Objects"
+          - href: tutorials/basic_commands/extended_operators.qmd
+            text: "Additional Operators"
+          - href: tutorials/basic_commands/logical_comparisons.qmd
+          - href: tutorials/basic_commands/comments.qmd
+          - href: tutorials/basic_commands/environments.qmd
+      - href: quizzes/basic_commands/index.qmd
+        text: "Knowledge Quiz"
       - href: conclusion.qmd
 
   page-footer:
     background: primary
     foreground: dark
     left: |
-      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl) 
-    right: 
-      - text: "&copy; 2025"
+      [![](/assets/images/UU_logo_2021_EN_BLACK.png){fig-alt="UU" width=200px}](https://uu.nl)
+    right:
+      - text: "&copy; 2026"
       - href: "https://github.com/open-stat-prog"
         text: Open-Stat-Prog

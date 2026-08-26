@@ -11,16 +11,26 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-Use this page to provide some kind of brief wrap-up.
+Congratulations! You've completed the *Basic Commands* module!
+
+## Learning Goals
+
+Now that you've completing this module, you should be able to:
+
+1. Use R to conduct simple mathematical calculations
+1. Create simple R objects
+1. Conduct simple mathematical calculations involving R objects
+1. Conduct simple logical comparisons between R objects
+1. Use comments in your code
 
 ## Next Steps
 
-If your module feeds naturally into another, link that module through the button below as a suggestion for further study.
-
-- Here, we're linking to the *First Steps* module.
+If you want to continue with your R learning journey, we recommend following the *R Functions* module next. Click the 
+button below to get started!
 
 ```{r}
 #| echo: false
 #| results: asis
-next_module_button("https://www.openstatprog.com/first-steps/")
+
+next_module_button("https://www.openstatprog.com/functions/index.html")
 ```
