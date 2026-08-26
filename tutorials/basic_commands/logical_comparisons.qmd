@@ -12,9 +12,10 @@ w <- 5
 
 Almost all the commands you've seen so far have been some sort of mathematical operation (e.g., adding, dividing,
 computing the natural logarithm), but R can do much more for us. *Logical comparisons* are one particularly useful class
-of operations, in which we test compare objects to test logical conditions. We can test many flavors of logical
-conditions in R. Logical tests return a logical value as the result. A logical value is `TRUE` whenever the tested
-condition is satisfied and `FALSE` when the tested condition is not satisfied.
+of operations, in which we compare objects to test logical conditions.
+
+We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value
+is `TRUE` whenever the tested condition is satisfied and `FALSE` when the tested condition is not satisfied.
 
 ::: {.column-margin}
 
@@ -30,7 +31,7 @@ the [**Vectors & Matrices**](https://openstatprog.com/vectors-matrices/index.htm
 **Do:** Run the following code to create three objects that we can use below.
 
 ```{webr-r}
-#| autorun: TRUE
+#| autorun: true
 
 y <- 5
 x <- 7
@@ -39,7 +40,8 @@ w <- 5
 
 ## Equality
 
-The simplest logical test is an equality check. To check if two objects are equal, we use the equality operator, `==`.
+The simplest logical test is an equality check. To check if two objects are equal, we use the equality test operator,
+`==`.
 
 ```{r}
 1 == 1
@@ -65,7 +67,6 @@ Mixing up `==` and `=` is one of the most common beginner mistakes (and experien
 **Predict:** What will the following lines print?
 
 ```{webr-r}
-# Check equality
 y == x
 y == w
 ```
@@ -89,15 +90,15 @@ y > x
 y >= x
 
 # Is y less than x?
-y < x  # less than
+y < x
 
 # Is y less than or equal to x?
-y <= x # less than or equal to
+y <= x
 ```
 
 ::: practice
 
-Given `y <- 5` and `w <- 5`, predict what value each of the following expressions will return.
+Given `y <- 5` and `w <- 5`, **predict** what value each of the following expressions will return.
 
 ```{r, eval = FALSE}
 y > w
@@ -169,7 +170,31 @@ y != w
 
 ## Combining Conditions
 
-We can create more complex logical conditions with the AND and OR operators: `&` and `|`.
+We can create more complex logical tests by combining multiple conditions with the AND and OR operators: `&` and `|`.
+
+Logical AND tests if all conditions are satisfied.
+
+- $A$ AND $B$ is true only when both Condition A and Condition B are satisfied.
+- $A$ AND $B$ is when Condition A, Condition B, or both are *not* satisfied.
+
+```{r}
+TRUE & TRUE
+TRUE & FALSE
+FALSE & FALSE
+```
+
+Logical OR tests if at least one condition is satisfied.
+
+- $A$ OR $B$ is true when Condition A, Condition B, or both are satisfied.
+- $A$ OR $B$ is false only when both Condition A and Condition B are *not* satisfied.
+
+```{r}
+TRUE | TRUE
+TRUE | FALSE
+FALSE | FALSE
+```
+
+To run multi-condition tests, we simply build up the desired logic by chaining together each constituent condition.
 
 ```{r}
 # Is y equal to w AND is y less than x?

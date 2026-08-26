@@ -53,10 +53,10 @@ For other roots, we can use fractional exponents.
 
 ```{r}
 # Cute root of y
-y^(1/3)
+y^(1 / 3)
 
 # Quartic root of y
-y^(1/4) # quartic root of y
+y^(1 / 4)
 ```
 
 ## Other Common Operators

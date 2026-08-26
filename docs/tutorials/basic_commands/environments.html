@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"options":{"fig-width":7,"classes":"","output":"true","comment":"","fig-height":5,"fig-cap":"","label":"unnamed-chunk-1","editor-word-wrap":"true","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","read-only":"false","message":"true","dpi":72,"warning":"true","autorun":"false","editor-font-scale":"1","out-height":"","results":"markup","out-width":"700px"},"code":"# Create some objects\nx <- 7\ny <- 8\nz <- 9\nname <- \"bob\"\nage <- 38"},{"id":2,"options":{"fig-width":7,"classes":"","output":"true","comment":"","fig-height":5,"fig-cap":"","label":"unnamed-chunk-2","editor-word-wrap":"true","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","read-only":"false","message":"true","dpi":72,"warning":"true","autorun":"false","editor-font-scale":"1","out-height":"","results":"markup","out-width":"700px"},"code":"ls()"},{"id":3,"options":{"fig-width":7,"classes":"","output":"true","comment":"","fig-height":5,"fig-cap":"","label":"unnamed-chunk-3","editor-word-wrap":"true","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","read-only":"false","message":"true","dpi":72,"warning":"true","autorun":"false","editor-font-scale":"1","out-height":"","results":"markup","out-width":"700px"},"code":"rm(x)\nls()"},{"id":4,"options":{"fig-width":7,"classes":"","output":"true","comment":"","fig-height":5,"fig-cap":"","label":"unnamed-chunk-4","editor-word-wrap":"true","editor-quick-suggestions":"false","context":"setup","editor-max-height":"","read-only":"false","message":"true","dpi":72,"warning":"true","autorun":"true","editor-font-scale":"1","out-height":"","results":"markup","out-width":"700px"},"code":"y <- 8\nz <- 9\nname <- \"bob\"\nage <- 38"},{"id":5,"options":{"fig-width":7,"classes":"","output":"true","comment":"","fig-height":5,"fig-cap":"","label":"unnamed-chunk-5","editor-word-wrap":"true","editor-quick-suggestions":"false","context":"interactive","editor-max-height":"","read-only":"false","message":"true","dpi":72,"warning":"true","autorun":"false","editor-font-scale":"1","out-height":"","results":"markup","out-width":"700px"},"code":""}];
+globalThis.qwebrCellDetails = [{"id":1,"code":"x <- 7\ny <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","options":{"label":"unnamed-chunk-1","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":2,"code":"ls()","options":{"label":"unnamed-chunk-2","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":3,"code":"rm(x)\nls()","options":{"label":"unnamed-chunk-3","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":4,"code":"y <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","options":{"label":"unnamed-chunk-4","message":"true","context":"setup","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"true","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":5,"code":"","options":{"label":"unnamed-chunk-5","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}}];
 
 </script>
 <script type="module">
@@ -1671,56 +1671,17 @@ div.callout-explanation.callout-style-default .callout-icon::before, div.callout
   content: '\f075' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: violet;
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
 }
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
 }
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
-}
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
-}
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f044' !important;
-  background-image: none;
-}
-div.callout-resource.callout {
-  border-left-color: orange;
-}
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
-}
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f188' !important;
   background-image: none;
 }
 div.callout-completion-time.callout {
@@ -1736,17 +1697,17 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   content: '\f2f2' !important;
   background-image: none;
 }
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f188' !important;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-going-further.callout {
@@ -1762,6 +1723,32 @@ div.callout-going-further.callout-style-default .callout-icon::before, div.callo
   content: '\f4d7' !important;
   background-image: none;
 }
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
+}
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
+}
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f044' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
 div.callout-reading-advanced.callout {
   border-left-color: red;
 }
@@ -1773,6 +1760,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
+  background-image: none;
+}
+div.callout-resource.callout {
+  border-left-color: orange;
+}
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
+}
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f0c1' !important;
   background-image: none;
 }
 </style>
@@ -1799,7 +1799,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">First Steps</span></a>
+<span class="menu-text">Basic Commands</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -1857,7 +1857,7 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/basic_commands/fundamentals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fundamental Interactions</span></a>
+ <span class="menu-text">Arithmetic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -2225,6 +2225,19 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
+<div class="callout callout-style-default callout-going-further callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Going Further
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The information on this page is largely optional. It’s good to have some awareness of R’s global environment and how R stores the objects you create, but you can safely progress to the next module without mastering these concepts.</p>
+</div>
+</div>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-reading-advanced callout-titled">
@@ -2254,7 +2267,7 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Since the global environment is the one you’ll interact with most frequently, its often treated as the default environment when economizing language (i.e., being lazy).</p>
+<p>Since the global environment is the one you’ll interact with most frequently, its often treated as the default environment when economizing language (i.e., being lazy) or picking software defaults.</p>
 <ul>
 <li>In these tutorials, whenever we refer to “the environment”, “your current environment”, “your R session”, or some variation of those terms, we’re talking about the global environment.</li>
 <li>The <em>Environment</em> tab in RStudio shows the contents of the global environment, by default.</li>
@@ -2280,7 +2293,7 @@ Note
 <div id="qwebr-insertion-location-2"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <div class="callout callout-style-default callout-explanation callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2289,7 +2302,7 @@ Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>You should now see a listing of all the objects you just created. Remember: whenever we create a new object, we’re storing that object in the global environment.</p>
 </div>
@@ -2301,7 +2314,7 @@ Explanation
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <p><strong>See:</strong> What effect did <code>rm(x)</code> have?</p>
 <div class="callout callout-style-default callout-explanation callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
@@ -2310,7 +2323,7 @@ Explanation
 </div>
 <div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
 </div>
-<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p>The listing returned by <code>ls()</code> no longer shows <code>x</code>, because you removed <code>x</code> from the environment by calling <code>rm(x)</code>.</p>
 </div>
@@ -2367,13 +2380,15 @@ Ready to Continue?
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>You’re ready to move on to <a href="../../tutorials/functions/index.qmd">R Functions</a> if you can:</p>
+<p>You’re ready to move on if you can:</p>
 <ul>
-<li>Run a simple calculation in R.</li>
-<li>Write a simple R expression using at least one arithmetic or logical operator.</li>
-<li>Explain what a comment does, and write one yourself.</li>
+<li>Run a simple calculation in R. <a href="../../tutorials/basic_commands/fundamentals.html">Relevant Page</a></li>
+<li>Create new R objects and use those objects for simple calculations. <a href="../../tutorials/basic_commands/objects.html">Relevant Page</a></li>
+<li>Write an expression that tests a logical condition. <a href="../../tutorials/basic_commands/logical_comparisons.html">Relevant Page</a></li>
+<li>Explain what a comment does and write one yourself. <a href="../../tutorials/basic_commands/comments.html">Relevant Page</a></li>
 </ul>
-<p>If any of these still feel shaky, that’s completely fine, revisit the relevant page above before continuing, or try the <a href="../../quizzes/basic_commands/index.html">Knowledge Quiz</a> to see exactly where to focus.</p>
+<p>If any of these concepts still feel shaky, that’s completely fine. Revisit the relevant page before proceeding.</p>
+<p>Take the <a href="../../quizzes/basic_commands/index.html">Knowledge Quiz</a> to evaluate your mastery of this module’s learning goals.</p>
 </div>
 </div>
 

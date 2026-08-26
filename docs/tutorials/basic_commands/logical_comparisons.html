@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"y <- 5\nx <- 7\nw <- 5","options":{"warning":"true","autorun":"TRUE","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-1","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}},{"id":2,"code":"# Check equality\ny == x\ny == w","options":{"warning":"true","autorun":"false","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-2","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}},{"id":3,"code":"","options":{"warning":"true","autorun":"false","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-3","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}},{"id":4,"code":"y == w\n!y == w","options":{"warning":"true","autorun":"false","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-4","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}},{"id":5,"code":"y == y & y != y\nw > w | w < w\nx > x | x <= x\nx >= x & x <= x","options":{"warning":"true","autorun":"false","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-5","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}},{"id":6,"code":"","options":{"warning":"true","autorun":"false","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-6","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}},{"id":7,"code":"","options":{"warning":"true","autorun":"false","fig-cap":"","comment":"","fig-width":7,"editor-font-scale":"1","context":"interactive","editor-word-wrap":"true","out-width":"700px","label":"unnamed-chunk-7","fig-height":5,"out-height":"","classes":"","dpi":72,"message":"true","read-only":"false","results":"markup","editor-max-height":"","editor-quick-suggestions":"false","output":"true"}}];
+globalThis.qwebrCellDetails = [{"code":"y <- 5\nx <- 7\nw <- 5","id":1,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"true","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-1","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}},{"code":"y == x\ny == w","id":2,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"false","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-2","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}},{"code":"","id":3,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"false","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-3","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}},{"code":"y == w\n!y == w","id":4,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"false","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-4","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}},{"code":"y == y & y != y\nw > w | w < w\nx > x | x <= x\nx >= x & x <= x","id":5,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"false","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-5","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}},{"code":"","id":6,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"false","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-6","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}},{"code":"","id":7,"options":{"editor-word-wrap":"true","warning":"true","fig-height":5,"output":"true","results":"markup","out-width":"700px","out-height":"","autorun":"false","editor-quick-suggestions":"false","comment":"","label":"unnamed-chunk-7","fig-width":7,"read-only":"false","classes":"","fig-cap":"","dpi":72,"message":"true","editor-max-height":"","editor-font-scale":"1","context":"interactive"}}];
 
 </script>
 <script type="module">
@@ -1658,19 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
-}
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
-}
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -1682,6 +1669,19 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
+  background-image: none;
+}
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
+}
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
+}
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f188' !important;
   background-image: none;
 }
 div.callout-reading.callout {
@@ -1697,19 +1697,6 @@ div.callout-reading.callout-style-default .callout-icon::before, div.callout-rea
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-completion-time.callout {
-  border-left-color: gray;
-}
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f2f2' !important;
-  background-image: none;
-}
 div.callout-going-further.callout {
   border-left-color: #B58900;
 }
@@ -1723,17 +1710,30 @@ div.callout-going-further.callout-style-default .callout-icon::before, div.callo
   content: '\f4d7' !important;
   background-image: none;
 }
-div.callout-resource.callout {
-  border-left-color: orange;
+div.callout-knowledge-check.callout {
+  border-left-color: #368FFF;
 }
-div.callout-resource.callout-style-default > .callout-header {
-  background-color: rgb(from orange r g b / 13%);
+div.callout-knowledge-check.callout-style-default > .callout-header {
+  background-color: rgba(54, 143, 255, 0.13);
 }
-div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
+div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f0c1' !important;
+  content: '\f044' !important;
+  background-image: none;
+}
+div.callout-completion-time.callout {
+  border-left-color: gray;
+}
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f2f2' !important;
   background-image: none;
 }
 div.callout-reading-advanced.callout {
@@ -1749,17 +1749,17 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
-div.callout-knowledge-check.callout {
-  border-left-color: #368FFF;
+div.callout-resource.callout {
+  border-left-color: orange;
 }
-div.callout-knowledge-check.callout-style-default > .callout-header {
-  background-color: rgba(54, 143, 255, 0.13);
+div.callout-resource.callout-style-default > .callout-header {
+  background-color: rgb(from orange r g b / 13%);
 }
-div.callout-knowledge-check .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-knowledge-check.callout-style-default .callout-icon::before, div.callout-knowledge-check.callout-titled .callout-icon::before {
+div.callout-resource .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-resource.callout-style-default .callout-icon::before, div.callout-resource.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f044' !important;
+  content: '\f0c1' !important;
   background-image: none;
 }
 div.callout-explanation.callout {
@@ -1777,6 +1777,35 @@ div.callout-explanation.callout-style-default .callout-icon::before, div.callout
 }
 </style>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../html/webex.css">
 </head>
@@ -1799,7 +1828,7 @@ div.callout-explanation.callout-style-default .callout-icon::before, div.callout
   </li>  
   <li class="nav-item">
     <a class="nav-link active" href="../../index.html" aria-current="page"> 
-<span class="menu-text">First Steps</span></a>
+<span class="menu-text">Basic Commands</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -1857,7 +1886,7 @@ div.callout-explanation.callout-style-default .callout-icon::before, div.callout
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/basic_commands/fundamentals.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Fundamental Interactions</span></a>
+ <span class="menu-text">Arithmetic</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -1887,7 +1916,7 @@ div.callout-explanation.callout-style-default .callout-icon::before, div.callout
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../tutorials/basic_commands/environments.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Environments (optional)</span></a>
+ <span class="menu-text">Environments</span></a>
   </div>
 </li>
       </ul>
@@ -2227,7 +2256,8 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 </header>
 
 
-<p>Almost all the commands you’ve seen so far have been some sort of mathematical operation (e.g., adding, dividing, computing the natural logarithm), but R can do much more for us. <em>Logical comparisons</em> are one particularly useful class of operations, in which we test compare objects to test logical conditions. We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value is <code>TRUE</code> whenever the tested condition is satisfied and <code>FALSE</code> when the tested condition is not satisfied.</p>
+<p>Almost all the commands you’ve seen so far have been some sort of mathematical operation (e.g., adding, dividing, computing the natural logarithm), but R can do much more for us. <em>Logical comparisons</em> are one particularly useful class of operations, in which we compare objects to test logical conditions.</p>
+<p>We can test many flavors of logical conditions in R. Logical tests return a logical value as the result. A logical value is <code>TRUE</code> whenever the tested condition is satisfied and <code>FALSE</code> when the tested condition is not satisfied.</p>
 
 <div class="no-row-height column-margin column-container"><div class="">
 <div class="callout callout-style-default callout-going-further callout-titled">
@@ -2248,7 +2278,7 @@ Going Further
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 <section id="equality" class="level2">
 <h2 class="anchored" data-anchor-id="equality">Equality</h2>
-<p>The simplest logical test is an equality check. To check if two objects are equal, we use the equality operator, <code>==</code>.</p>
+<p>The simplest logical test is an equality check. To check if two objects are equal, we use the equality test operator, <code>==</code>.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">==</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -2322,12 +2352,12 @@ Explanation
 <pre><code>[1] FALSE</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y less than x?</span></span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> x  <span class="co"># less than</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y less than or equal to x?</span></span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> x <span class="co"># less than or equal to</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&lt;=</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -2342,7 +2372,7 @@ Practice
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Given <code>y &lt;- 5</code> and <code>w &lt;- 5</code>, predict what value each of the following expressions will return.</p>
+<p>Given <code>y &lt;- 5</code> and <code>w &lt;- 5</code>, <strong>predict</strong> what value each of the following expressions will return.</p>
 <div class="cell" data-layout-align="center">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;</span> w</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">&gt;=</span> w</span>
@@ -2444,20 +2474,59 @@ Explanation
 </section>
 <section id="combining-conditions" class="level2">
 <h2 class="anchored" data-anchor-id="combining-conditions">Combining Conditions</h2>
-<p>We can create more complex logical conditions with the AND and OR operators: <code>&amp;</code> and <code>|</code>.</p>
+<p>We can create more complex logical tests by combining multiple conditions with the AND and OR operators: <code>&amp;</code> and <code>|</code>.</p>
+<p>Logical AND tests if all conditions are satisfied.</p>
+<ul>
+<li><span class="math inline">\(A\)</span> AND <span class="math inline">\(B\)</span> is true only when both Condition A and Condition B are satisfied.</li>
+<li><span class="math inline">\(A\)</span> AND <span class="math inline">\(B\)</span> is when Condition A, Condition B, or both are <em>not</em> satisfied.</li>
+</ul>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y equal to w AND is y less than x?</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&lt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">&amp;</span> <span class="cn">TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y equal to w AND is y greater than x?</span></span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">&amp;</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y equal to w OR is y greater than x?</span></span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">|</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="cn">FALSE</span> <span class="sc">&amp;</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p>Logical OR tests if at least one condition is satisfied.</p>
+<ul>
+<li><span class="math inline">\(A\)</span> OR <span class="math inline">\(B\)</span> is true when Condition A, Condition B, or both are satisfied.</li>
+<li><span class="math inline">\(A\)</span> OR <span class="math inline">\(B\)</span> is false only when both Condition A and Condition B are <em>not</em> satisfied.</li>
+</ul>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">|</span> <span class="cn">TRUE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="cn">TRUE</span> <span class="sc">|</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="cn">FALSE</span> <span class="sc">|</span> <span class="cn">FALSE</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+</div>
+<p>To run multi-condition tests, we simply build up the desired logic by chaining together each constituent condition.</p>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y equal to w AND is y less than x?</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&lt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] TRUE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y equal to w AND is y greater than x?</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">&amp;</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] FALSE</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Is y equal to w OR is y greater than x?</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>y <span class="sc">==</span> w <span class="sc">|</span> y <span class="sc">&gt;</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
@@ -2511,14 +2580,14 @@ Practice
 <div id="tabset-2-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-2-2-tab">
 <p>Let’s assume the current date is 25-08-2026. Then, today’s solution would be the following.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">25</span> <span class="sc">+</span> <span class="dv">8</span>) <span class="sc">&gt;</span> <span class="dv">26</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a>(<span class="dv">25</span> <span class="sc">+</span> <span class="dv">8</span>) <span class="sc">&gt;</span> <span class="dv">26</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>
 </div>
 <p>In R, most mathematical operators take precedence over logical tests. So, the parentheses in the solution are not strictly necessary.</p>
 <div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="dv">25</span> <span class="sc">+</span> <span class="dv">8</span> <span class="sc">&gt;</span> <span class="dv">26</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="dv">25</span> <span class="sc">+</span> <span class="dv">8</span> <span class="sc">&gt;</span> <span class="dv">26</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] TRUE</code></pre>
 </div>

@@ -1,5 +1,5 @@
 ---
-title: "Fundamental Interactions"
+title: "Arithmetic"
 ---
 
 ## R as a Calculator
@@ -135,15 +135,15 @@ When parsing your commands, R will, mostly, scan each line of code from left to 
 operation according to the usual PEMDAS ordering (**P**arentheses, **E**xponents, **M**ultiplication/**D**ivision,
 **A**ddition/**S**ubtraction).
 
-Run the following two lines of code and compare their results.
+**Do:** Run the following two lines of code and compare their results.
 
 ```{webr-r}
 3 + 4 / 2
 (3 + 4) / 2
 ```
 
-Notice that the two lines produce different answers, even though they use the same three numbers and the same three
-operators. Why?
+**See:** Notice that the two lines produce different answers, even though they use the same three numbers and the same
+three operators. Why?
 
 - In the first line, R first divides `4` by `2`, and *then* adds `3` to the result.
 - In the second line, the parentheses force R to first add `3` to `4`, and only *then* divide the result by `2`.
@@ -160,27 +160,25 @@ Why do the following two expressions produce different answers?
 ## {{< var tab_title.question >}}
 
 ```{r}
-9^(1/2)
-9^1/2
+(3 + 4 - 2) * (10 - 7)
+3 + 4 - 2 * 10 - 7
 ```
 
 ## {{< var tab_title.solution >}}
 
 ```{r}
-9^(1/2)
-sqrt(9)
+(3 + 4 - 2) * (10 - 7)
 ```
 
-In the first case, we're raising 9 to the power of $\frac{1}{2}$, which is the same as taking its square root.
+In the first case, we've used parentheses to group the two blocks of addition/subtraction $(3 + 4 - 2 = 5)$ and $(10 - 7
+= 3)$. We then multiply those results $(5 \times 3 = 15)$.
 
 ```{r}
-9^1/2
-9 / 2
+3 + 4 - 2 * 10 - 7
 ```
 
-In the second case, R applies the exponent (`^`) operator *before* the division operator (`/`). So, we first raise 9 to
-the power of 1 (which does nothing), and then we divide the result by 2. In the end, we've just used some convoluted
-code to dived 9 by 2.
+In the second case, we rely on R's rules for operator precedence, so the multiplication $(2 \times 10 = 20)$ is done
+first. Then we do the addition/subtraction $(3 + 4 - 20 - 7 = -20)$.
 
 ::::
 
@@ -212,7 +210,7 @@ division into one expression.
 (31 - 21) / 7
 ```
 
-Note the use of parentheses to ensure that we compute the number of remaining days *before* doing any dividion.
+Note the use of parentheses to ensure that we compute the number of remaining days *before* doing any division.
 
 ::::
 
@@ -220,10 +218,16 @@ Note the use of parentheses to ensure that we compute the number of remaining da
 
 ::: knowledge-check
 
-If you wanted to raise 5 to the power of $\frac{2}{3}$, which version of the following R expressions is correct:
-`5^(2/3)` or `5^2/3`?
+Would the following two expressions produce the same result?
 
-- Try both in the editor below to confirm your reasoning.
+```{r}
+#| eval: FALSE
+
+(3 * 4) - (10 / 2)
+3 * 4 - 10 / 2
+```
+
+Use the interactive editor below to check your prediction.
 
 ```{webr-r}
 ```

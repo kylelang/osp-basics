@@ -29,13 +29,13 @@ anything useful with R, we need a way to store a value so we can use it again in
 
 ## Creating Objects
 
-We create objects by 'assigning' values to names via the 'assignment' operator, `<-`. The following code assigns the
+We create objects by *assigning* values to names via the assignment operator, `<-`. The following code assigns the
 values `7`, `2.5`, and `"foo"` to the objects `x`, `y`, and `z`, respectively.
 
 **Do:** Run the following code.
 
 ```{webr-r}
-#| autorun: TRUE
+#| autorun: true
 
 x <- 7
 y <- 2.5
@@ -81,6 +81,17 @@ Unless you have a very good reason to do otherwise, use only `<-` for assignment
 
 :::
 
+::: {.column-margin}
+
+:::: reading-advanced
+
+Following common style conventions makes your code easier to understand, debug, and improve (both by you and others). As
+you progress in your R journey, we recommend following the [Tidyverse Style Guide](https://style.tidyverse.org/).
+
+::::
+
+:::
+
 ## Arithmetic with Objects
 
 All of the familiar arithmetic operators you practiced on the previous page (`+`, `-`, `*`, `/`) also work on named R
@@ -118,8 +129,7 @@ expression.
 
 ::: practice
 
-Given `x <- 7` and `y <- 2.5` (already run above), predict what each of the following lines will print before running
-them.
+Given `x <- 7` and `y <- 2.5` (already run above), **predict** what each of the following lines will print.
 
 ```{r}
 #| eval: FALSE
@@ -188,8 +198,8 @@ projects. If you're not careful, your environment can quickly become cluttered w
 
 ::: practice
 
-Given the objects defined above (`x <- 2.5`, `y <- 7`, `z <- 5`), predict the value of each expression *before* running
-it.
+Given the objects defined above (`x <- 2.5`, `y <- 7`, `z <- 5`), **predict** what each of the following expressions
+will produce.
 
 ```{r}
 #| eval: FALSE
@@ -198,6 +208,8 @@ z + y
 z * x
 z - y
 ```
+
+Use the interactive editor to check your predictions.
 
 :::: {.panel-tabset}
 
@@ -228,8 +240,8 @@ z * x
 z - y
 ```
 
-Notice how each line now produces a different result, even though you didn't change anything about the expressions,
-themselves. This paradigm is one of the most useful properties of programmatic data analysis. By changing the values
+Notice how each line now produces a different result, even though you didn't change anything about the three arithmetic
+expressions. This paradigm is one of the most useful properties of programmatic data analysis. By changing the values
 stored in the relevant objects (e.g., by loading a different dataset), you can reuse the same code to re-run the same
 calculation on different data.
 
@@ -239,14 +251,15 @@ calculation on different data.
 
 ::: common-mistakes
 
-Even though we name objects with words, R has different ways of handling named objects and character strings.
+Even though we name objects with words, R handles named objects and character strings very differently.
 
-- We use quotation marks to denote a character string.
-- We don't quote object names.
+- Use quotation marks to denote a character string.
+- Don't quote object names.
 
 If we run `foo <- "bar"`, `foo` is an object that stores the character string `"bar"`. We need to be careful with what
-we quote: `foo` and `"foo"` are completely different entities. Most quotation-based mistakes fall into one of two
-classes.
+we quote: `foo` and `"foo"` are completely different entities, and quotation-based mistakes are quite common.
+
+Most quotation-based mistakes fall into one of two classes.
 
 **Mistake 1:** We forget the quotation marks when trying to define a character string.
 
@@ -268,7 +281,7 @@ Since we didn't quote the value on the right-hand-side of the assignment operato
 alice <- 42
 bob <- 1984
 
-# We want to add the values stored in the objects alice an bob
+# We want to add the values stored in the objects alice and bob
 alice + "bob"
 ```
 
@@ -283,7 +296,18 @@ but `"bob"` is just a character string that has no relation to the object `bob`.
 You might wonder why we don't just write `7 + 2.5` directly instead of first assigning `7` to `y`, then assigning `2.5`
 to `x`, and finally computing `y + x`. For a single calculation, writing the numbers directly is perfectly fine, but not
 when your calculations get longer and more complex. In real-world projects, you will need to reuse certain data values
-multiple times. So, storing those values as named objects makes your code far easier to read, reuse, and fix.
+multiple times. Storing those values as named objects makes your code far easier to read, reuse, and fix.
+
+Apart from any practical considerations, you should get comfortable using R objects because you'll be seeing a whole lot
+of them as you progress in your R journey. Objects are baked into the fundamental design philosophy of R. According to a
+[2014 presentation by John Chambers](https://www.r-project.org/conferences/useR-2014/files/chambers.pdf) (one of R's
+creators),
+
+> - Everything that exists is an object.
+> - Everything that happens is a function call.
+
+You'll learn more about the second pillar of R's design philosophy in the [**R
+Functions**](https://openstatprog.com/functions/index.html) module.
 
 ::: knowledge-check
 

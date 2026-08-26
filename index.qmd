@@ -12,7 +12,7 @@ source(here::here("R", "buttons.R"))
 
 ::: completion-time
 
-**About 30–45 minutes**, including practice exercises and knowledge quizzes.
+**About 45-60 minutes**, including practice exercises and knowledge quiz.
 
 :::
 
