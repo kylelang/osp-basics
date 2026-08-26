@@ -10,7 +10,7 @@ object. That might sound abstract right now, but we'll build up the core ideas t
 1. [Extended Operators](/tutorials/basic_commands/extended_operators.qmd): Powers, roots, and other useful functions
 1. [Logical Comparisons](/tutorials/basic_commands/logical_comparisons.qmd): Asking R `TRUE`/`FALSE` questions
 1. [Comments](/tutorials/basic_commands/comments.qmd): Leaving notes in your code
-1. [Environments](/tutorials/basic_commands/environments.qmd) *(optional)*: Where R keeps your objects
+1. [Environments](/tutorials/basic_commands/environments.qmd): Where R keeps your objects
 
-By the end of this module, you'll be able to run calculations in R, interpret the output, and write your own simple
-expressions. These basic interactions are the foundation every R-based data analysis builds on.
+By the end of this module, you'll be able to run simple calculations in R and write your own simple expressions. These
+basic interactions are the foundation that every R-based data analysis builds on.

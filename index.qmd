@@ -38,5 +38,5 @@ Click the button below to get started.
 ```{r}
 #| echo: false
 #| results: asis
-begin_button("/tutorials/basic_commands/index.html")
+begin_button("/tutorials/basic_commands/index.qmd")
 ```

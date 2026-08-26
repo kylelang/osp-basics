@@ -138,15 +138,15 @@ ls()
 
 ## Ready to Continue?
 
-You're ready to move on if you can:
+You're ready to progress if you can:
 
-- Run a simple calculation in R. [Relevant Page](/tutorials/basic_commands/fundamentals.qmd)
+- Run a simple calculation in R. [Relevant Section](/tutorials/basic_commands/fundamentals.qmd)
 - Create new R objects and use those objects for simple calculations. [Relevant
-Page](/tutorials/basic_commands/objects.qmd)
-- Write an expression that tests a logical condition. [Relevant Page](/tutorials/basic_commands/logical_comparisons.qmd)
-- Explain what a comment does and write one yourself. [Relevant Page](/tutorials/basic_commands/comments.qmd)
+Section](/tutorials/basic_commands/objects.qmd)
+- Write an expression that tests a logical condition. [Relevant Section](/tutorials/basic_commands/logical_comparisons.qmd)
+- Explain what a comment does and write one yourself. [Relevant Section](/tutorials/basic_commands/comments.qmd)
 
-If any of these concepts still feel shaky, that's completely fine. Revisit the relevant page before proceeding.
+If any of these concepts still feel shaky, that's completely fine. Revisit the relevant section before proceeding.
 
 Take the [Knowledge Quiz](/quizzes/basic_commands/index.qmd) to check your learning.
 
