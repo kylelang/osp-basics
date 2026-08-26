@@ -54,9 +54,7 @@ The simplest logical test is an equality check. To check if two objects are equa
 Notice that the equality test operator, `==`, is two equals signs. Remember that a single equals sign is one of the
 possible assignment operators. You cannot use a single equals sign to do a logical comparison.
 
-```{r}
-#| error: TRUE
-
+```{r, error = TRUE}
 2 = 3
 ```
 

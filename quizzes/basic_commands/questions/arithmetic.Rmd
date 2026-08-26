@@ -22,7 +22,8 @@ What value will the following R code produce?
 Solution
 ========
 
-By applying the appropriate order of operations, we get `r a`.
+By applying the appropriate order of operations (parentheses before multiplication/division before
+addition/subtraction), we get `r a`.
 
 Meta-information
 ================

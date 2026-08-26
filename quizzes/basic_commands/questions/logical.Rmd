@@ -46,4 +46,4 @@ Meta-information
 exname: Logical Comparisons
 extype: mchoice
 exsolution: 1111110000000
-exshuffle: 6
+exshuffle: 5

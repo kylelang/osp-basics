@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"id":1,"code":"x <- 7\ny <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","options":{"label":"unnamed-chunk-1","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":2,"code":"ls()","options":{"label":"unnamed-chunk-2","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":3,"code":"rm(x)\nls()","options":{"label":"unnamed-chunk-3","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":4,"code":"y <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","options":{"label":"unnamed-chunk-4","message":"true","context":"setup","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"true","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}},{"id":5,"code":"","options":{"label":"unnamed-chunk-5","message":"true","context":"interactive","results":"markup","classes":"","editor-max-height":"","editor-word-wrap":"true","output":"true","editor-quick-suggestions":"false","fig-cap":"","comment":"","editor-font-scale":"1","dpi":72,"out-width":"700px","autorun":"false","fig-width":7,"out-height":"","fig-height":5,"warning":"true","read-only":"false"}}];
+globalThis.qwebrCellDetails = [{"code":"x <- 7\ny <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","id":1,"options":{"autorun":"false","label":"unnamed-chunk-1","fig-height":5,"context":"interactive","out-height":"","comment":"","editor-max-height":"","fig-width":7,"warning":"true","read-only":"false","classes":"","editor-font-scale":"1","message":"true","editor-quick-suggestions":"false","dpi":72,"output":"true","editor-word-wrap":"true","results":"markup","fig-cap":"","out-width":"700px"}},{"code":"ls()","id":2,"options":{"autorun":"false","label":"unnamed-chunk-2","fig-height":5,"context":"interactive","out-height":"","comment":"","editor-max-height":"","fig-width":7,"warning":"true","read-only":"false","classes":"","editor-font-scale":"1","message":"true","editor-quick-suggestions":"false","dpi":72,"output":"true","editor-word-wrap":"true","results":"markup","fig-cap":"","out-width":"700px"}},{"code":"rm(x)\nls()","id":3,"options":{"autorun":"false","label":"unnamed-chunk-3","fig-height":5,"context":"interactive","out-height":"","comment":"","editor-max-height":"","fig-width":7,"warning":"true","read-only":"false","classes":"","editor-font-scale":"1","message":"true","editor-quick-suggestions":"false","dpi":72,"output":"true","editor-word-wrap":"true","results":"markup","fig-cap":"","out-width":"700px"}},{"code":"y <- 8\nz <- 9\nname <- \"bob\"\nage <- 38","id":4,"options":{"autorun":"true","label":"unnamed-chunk-4","fig-height":5,"context":"setup","out-height":"","comment":"","editor-max-height":"","fig-width":7,"warning":"true","read-only":"false","classes":"","editor-font-scale":"1","message":"true","editor-quick-suggestions":"false","dpi":72,"output":"true","editor-word-wrap":"true","results":"markup","fig-cap":"","out-width":"700px"}},{"code":"","id":5,"options":{"autorun":"false","label":"unnamed-chunk-5","fig-height":5,"context":"interactive","out-height":"","comment":"","editor-max-height":"","fig-width":7,"warning":"true","read-only":"false","classes":"","editor-font-scale":"1","message":"true","editor-quick-suggestions":"false","dpi":72,"output":"true","editor-word-wrap":"true","results":"markup","fig-cap":"","out-width":"700px"}}];
 
 </script>
 <script type="module">
@@ -1658,32 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-explanation.callout {
-  border-left-color: violet;
-}
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f075' !important;
-  background-image: none;
-}
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
-}
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
-}
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
 div.callout-completion-time.callout {
   border-left-color: gray;
 }
@@ -1697,32 +1671,6 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   content: '\f2f2' !important;
   background-image: none;
 }
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-going-further.callout {
-  border-left-color: #B58900;
-}
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
-}
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f4d7' !important;
-  background-image: none;
-}
 div.callout-knowledge-check.callout {
   border-left-color: #368FFF;
 }
@@ -1734,6 +1682,19 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f044' !important;
+  background-image: none;
+}
+div.callout-explanation.callout {
+  border-left-color: violet;
+}
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f075' !important;
   background-image: none;
 }
 div.callout-practice.callout {
@@ -1762,6 +1723,19 @@ div.callout-reading-advanced.callout-style-default .callout-icon::before, div.ca
   content: '\f518' !important;
   background-image: none;
 }
+div.callout-reading.callout {
+  border-left-color: violet;
+}
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
 div.callout-resource.callout {
   border-left-color: orange;
 }
@@ -1773,6 +1747,32 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
+}
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
+}
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f188' !important;
+  background-image: none;
+}
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
   background-image: none;
 }
 </style>
@@ -2388,7 +2388,7 @@ Ready to Continue?
 <li>Explain what a comment does and write one yourself. <a href="../../tutorials/basic_commands/comments.html">Relevant Page</a></li>
 </ul>
 <p>If any of these concepts still feel shaky, that’s completely fine. Revisit the relevant page before proceeding.</p>
-<p>Take the <a href="../../quizzes/basic_commands/index.html">Knowledge Quiz</a> to evaluate your mastery of this module’s learning goals.</p>
+<p>Take the <a href="../../quizzes/basic_commands/index.html">Knowledge Quiz</a> to check your learning.</p>
 </div>
 </div>
 

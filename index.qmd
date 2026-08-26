@@ -10,9 +10,13 @@ format:
 source(here::here("R", "buttons.R"))
 ```
 
-::: completion-time
+::: {.column-margin}
+
+:::: completion-time
 
 **About 45-60 minutes**, including practice exercises and knowledge quiz.
+
+::::
 
 :::
 

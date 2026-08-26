@@ -7,6 +7,8 @@ On the last page, every value we used disappeared as soon as R printed it, we di
 anything useful with R, we need a way to store a value so we can use it again in future commands. We do this by creating
 **objects** that hold the pieces of data we want to work with.
 
+## Creating Objects
+
 ::: {.column-margin}
 
 :::: reading
@@ -26,8 +28,6 @@ anything useful with R, we need a way to store a value so we can use it again in
 ::::
 
 :::
-
-## Creating Objects
 
 We create objects by *assigning* values to names via the assignment operator, `<-`. The following code assigns the
 values `7`, `2.5`, and `"foo"` to the objects `x`, `y`, and `z`, respectively.

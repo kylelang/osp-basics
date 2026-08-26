@@ -69,6 +69,19 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 <style>
+div.callout-going-further.callout {
+  border-left-color: #B58900;
+}
+div.callout-going-further.callout-style-default > .callout-header {
+  background-color: rgba(181, 137, 0, 0.13);
+}
+div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f4d7' !important;
+  background-image: none;
+}
 div.callout-completion-time.callout {
   border-left-color: gray;
 }
@@ -80,71 +93,6 @@ div.callout-completion-time.callout-style-default .callout-icon::before, div.cal
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f2f2' !important;
-  background-image: none;
-}
-div.callout-reading-advanced.callout {
-  border-left-color: red;
-}
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
-}
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
-  background-image: none;
-}
-div.callout-practice.callout {
-  border-left-color: green;
-}
-div.callout-practice.callout-style-default > .callout-header {
-  background-color: rgb(from green r g b / 13%);
-}
-div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f085' !important;
-  background-image: none;
-}
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
-}
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
-}
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
-div.callout-explanation.callout {
-  border-left-color: violet;
-}
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f075' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-knowledge-check.callout {
@@ -160,17 +108,56 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   content: '\f044' !important;
   background-image: none;
 }
-div.callout-going-further.callout {
-  border-left-color: #B58900;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-going-further.callout-style-default > .callout-header {
-  background-color: rgba(181, 137, 0, 0.13);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-going-further .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-going-further.callout-style-default .callout-icon::before, div.callout-going-further.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
-  content: '\f4d7' !important;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-explanation.callout {
+  border-left-color: violet;
+}
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f075' !important;
+  background-image: none;
+}
+div.callout-practice.callout {
+  border-left-color: green;
+}
+div.callout-practice.callout-style-default > .callout-header {
+  background-color: rgb(from green r g b / 13%);
+}
+div.callout-practice .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-practice.callout-style-default .callout-icon::before, div.callout-practice.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f085' !important;
+  background-image: none;
+}
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -184,6 +171,19 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f0c1' !important;
+  background-image: none;
+}
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
+}
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
+}
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f188' !important;
   background-image: none;
 }
 </style>
@@ -356,8 +356,8 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <li><code>2</code> and <code>16</code></li>
 <li><code>8</code>, <code>2</code>, <code>2</code>, and <code>16</code></li>
 <li><code>0</code>, <code>0</code>, <code>2</code>, and <code>16</code></li>
-<li>An error, because the first two lines are not valid R code</li>
 <li><code>2</code></li>
+<li>An error, because the first two lines are not valid R code</li>
 </ul>
 </section>
 </section>
@@ -366,17 +366,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
 <section id="answerlist-1" class="level2">
 <h2 class="anchored" data-anchor-id="answerlist-1">Answerlist</h2>
 <ul>
-<li>Correct: The lines starting with <code>#</code> are comment and are never evaluated, so R only prints the results of the last two lines.</li>
-<li>Incorrect: Commented lines are not evaluated as R code, so no output would be printed for the first two lines.</li>
-<li>Incorrect: Commented lines are not evaluated as R code, so no <code>0</code> would be printed.</li>
-<li>Incorrect: A <code>#</code> simply marks the rest of the line as a comment. These comments would not cause an error.</li>
-<li>Incorrect: Both the third and fourth lines are evaluated, so we would see two printed values.</li>
+<li>The lines starting with <code>#</code> are comment and are never evaluated, so R only prints the results of the last two lines.</li>
+<li>Commented lines are not evaluated as R code, so no output would be printed for the first two lines.</li>
+<li>Commented lines are not evaluated as R code, so no <code>0</code> would be printed.</li>
+<li>Both the third and fourth lines are evaluated, so we would see two printed values.</li>
+<li>A <code>#</code> character simply marks the rest of the line as a comment. These comments would not cause an error.</li>
 </ul>
 </section>
 </section>
 <section id="meta-information" class="level1">
 <h1>Meta-information</h1>
-<p>exname: Comments extype: schoice exsolution: 10000 exshuffle: TRUE</p>
+<p>exname: Comments extype: schoice exsolution: 10000 exshuffle: 5</p>
 
 
 </section>

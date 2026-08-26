@@ -148,6 +148,6 @@ Page](/tutorials/basic_commands/objects.qmd)
 
 If any of these concepts still feel shaky, that's completely fine. Revisit the relevant page before proceeding.
 
-Take the [Knowledge Quiz](/quizzes/basic_commands/index.qmd) to evaluate your mastery of this module's learning goals.
+Take the [Knowledge Quiz](/quizzes/basic_commands/index.qmd) to check your learning.
 
 :::

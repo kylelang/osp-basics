@@ -2,6 +2,10 @@
 title: "Comments"
 ---
 
+Like any sensible programming language, R allows us to include comments in our code. The comment character in R is `#`.
+Each line preceded by at least one `#` symbol will be interpreted as a comment. Comments are not evaluated when you run
+your code. R simply ignores anything after the `#` character.
+
 ::: {.column-margin}
 
 :::: reading
@@ -11,10 +15,6 @@ title: "Comments"
 ::::
 
 :::
-
-Like any sensible programming language, R allows us to include comments in our code. The comment character in R is `#`.
-Each line preceded by at least one `#` symbol will be interpreted as a comment. Comments are not evaluated when you run
-your code. R simply ignores anything after the `#` character.
 
 ```{r}
 # This is a comment, not code
