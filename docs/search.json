@@ -537,7 +537,7 @@
     "href": "quizzes/basic_commands/questions/logical.html#answerlist-1",
     "title": "Question",
     "section": "Answerlist",
-    "text": "Answerlist\n\nTRUE: “foo” is not equal to “bar”\nTRUE: 14 is strictly less than 48\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7\nTRUE: “alice” is not equal to “bob”, but “alice is equal to”alice”\nTRUE: 6 is not strictly greater than 7, and that result is negated\nTRUE: Trivially\nFALSE: Trivially\nFALSE: “foo” is not equal to “bar”\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7\nFALSE: “alice” is not equal to “bob”, and “alice” is equal to “alice”\nFALSE: “alice” is not equal to “bob”\nFALSE: Trivial negation\nFALSE: Trivially"
+    "text": "Answerlist\n\nTRUE: “foo” is not equal to “bar”\nTRUE: 14 is strictly less than 48\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7 (both conditions must be true)\nTRUE: “alice” is not equal to “bob”, but “alice is equal to”alice” (at least one condition must be true)\nTRUE: 6 is not strictly greater than 7, and that result is negated\nTRUE: Trivially\nFALSE: Trivially\nFALSE: “foo” is not equal to “bar”\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7 (both conditions must be true)\nFALSE: “alice” is equal to “alice”, but “alice” is not equal to “bob” (both conditions must be true)\nFALSE: “alice” is not equal to “bob”\nFALSE: Trivial negation\nFALSE: Trivially (both conditions must be true)"
   },
   {
     "objectID": "quizzes/basic_commands/questions/assignment.html",
@@ -565,7 +565,7 @@
     "href": "quizzes/basic_commands/index.html",
     "title": "Knowledge Quiz: Basic Commands",
     "section": "",
-    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich of the following commands represents the recommended way to assign the value 7 to the object y?\n\n7 -&gt; yy &lt;- 7y &lt; 77 &lt;- yy |&gt; 7\n\n\n\nAlthough there are three valid assignment operators: &lt;-, -&gt;, =, only the left-facing arrow is recommended by most style guides.\n\nThis is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.\nCorrect\nThis is a logical comparison. We’re checking if the value of y is less than 7.\nThis isn’t legal R code. This command attempts to assign the value y to the variable 7, but variable names can’t begin with numbers.\nThis is a misuse of the native R pipe operator.\n\n\n\n\n\nWhat value will the following R code produce?\n2 + 4 * 3 - 8\n\n\n\nBy applying the appropriate order of operations, we get 6.\n\n\n\n\nWhat value will the following R code produce?\n2 + 3 * 4\n\n\n\nBy applying the appropriate order of operations (parentheses before multiplication/division before addition/subtraction), we get 14.\n\n\n\n\nWhich of the following expressions will return TRUE?\n\n(8 - 1) == 7 & 7 &gt; (14 / 2)\"foo\" == \"bar\"!TRUE(8 - 1) == 7 & 7 &gt;= (14 / 2)\"alice\" == \"bob\" & \"alice\" == \"alice\"TRUE & FALSE\n\n\n\n\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7\nFALSE: “foo” is not equal to “bar”\nFALSE: Trivial negation\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7\nFALSE: “alice” is not equal to “bob”\nFALSE: Trivially\n\n\n\n\n\nWhat will the following R code print when you run it?\n5 + 5\n# 5 - 5\n5 * 5\n\nAn error, because the second line is invalid R code10, 0, and 2510 and 250 and 2510 and 0\n\n\n\n\nIncorrect: a # simply marks the rest of the line as a comment; it doesn’t cause an error.\nIncorrect: the commented line is never evaluated by R, so 0 is never printed.\nCorrect: the line starting with # is a comment and is never evaluated, so R only prints the results of the first and third lines.\nIncorrect: the first line (5 + 5) is still evaluated and printed.\nIncorrect: the third line (5 * 5) is still evaluated and printed.\n\n\n\n\n\n\n\n Back to top",
+    "text": "Note\n\n\n\n\nClick the check-mark button to check your answer.\nClick the question-mark button to see an explanation of the solution.\n\n\n\n\n\n\nWhich of the following commands represents the recommended way to assign the value 7 to the object y?\n\n7 -&gt; yy &lt;- 67 &lt;- yy &lt; 7y &lt;- 7\n\n\n\nAlthough there are three valid assignment operators: &lt;-, -&gt;, =, only the left-facing arrow is recommended by most style guides.\n\nThis is technically valid assignment, but putting the variable on the right-hand side of the assignment operator is not recommended style.\nThat’s the correct assignment operator, but this command assigns the wrong value.\nThis isn’t legal R code. This command attempts to assign the value y to the variable 7, but variable names can’t begin with numbers.\nThis is a logical comparison. We’re checking if the value of y is less than 7.\nCorrect\n\n\n\n\n\nWhat value will the following R code produce?\n(2 + 4) * 3 - 8\n\n\n\nBy applying the appropriate order of operations, we get 10.\n\n\n\n\nWhat value will the following R code produce?\n(2 + 3) * 4\n\n\n\nBy applying the appropriate order of operations (parentheses before multiplication/division before addition/subtraction), we get 20.\n\n\n\n\nWhich of the following expressions will return TRUE?\n\n(8 - 1) == 7 & 7 &gt; (14 / 2)(8 - 1) == 7 & 7 &gt;= (14 / 2)!(6 &gt; 7)\"alice\" == \"bob\" & \"alice\" == \"alice\"TRUE\"foo\" == \"bar\"\n\n\n\n\nFALSE: 7 is equal to 7, but 7 is not strictly greater than 7 (both conditions must be true)\nTRUE: 7 is equal to 7, and 7 is greater than or equal to 7 (both conditions must be true)\nTRUE: 6 is not strictly greater than 7, and that result is negated\nFALSE: “alice” is not equal to “bob”\nTRUE: Trivially\nFALSE: “foo” is not equal to “bar”\n\n\n\n\n\nWhat will the following R code print when you run it?\n# 4 * 2\n# 4 - 2\n4 / 2\n4^2\n\n0, 0, 2, and 168, 2, 2, and 162 and 162An error, because the first two lines are not valid R code\n\n\n\n\nIncorrect: Commented lines are not evaluated as R code, so no 0 would be printed.\nIncorrect: Commented lines are not evaluated as R code, so no output would be printed for the first two lines.\nCorrect: The lines starting with # are comment and are never evaluated, so R only prints the results of the last two lines.\nIncorrect: Both the third and fourth lines are evaluated, so we would see two printed values.\nIncorrect: A # simply marks the rest of the line as a comment. These comments would not cause an error.\n\n\n\n\n\n\n\n Back to top",
     "crumbs": [
       "Open-Stat-Prog",
       "Knowledge Quiz"
@@ -656,28 +656,28 @@
     "href": "quizzes/basic_commands/questions/comments.html",
     "title": "Question",
     "section": "",
-    "text": "What will the following R code print when you run it?\n5 + 5\n# 5 - 5\n5 * 5\n\n\n\n10 and 25\n10, 0, and 25\n0 and 25\nAn error, because the second line is invalid R code\n10 and 0"
+    "text": "What will the following R code print when you run it?\n# 4 * 2\n# 4 - 2\n4 / 2\n4^2\n\n\n\n2 and 16\n8, 2, 2, and 16\n0, 0, 2, and 16\nAn error, because the first two lines are not valid R code\n2"
   },
   {
     "objectID": "quizzes/basic_commands/questions/comments.html#answerlist",
     "href": "quizzes/basic_commands/questions/comments.html#answerlist",
     "title": "Question",
     "section": "",
-    "text": "10 and 25\n10, 0, and 25\n0 and 25\nAn error, because the second line is invalid R code\n10 and 0"
+    "text": "2 and 16\n8, 2, 2, and 16\n0, 0, 2, and 16\nAn error, because the first two lines are not valid R code\n2"
   },
   {
     "objectID": "quizzes/basic_commands/questions/comments.html#answerlist-1",
     "href": "quizzes/basic_commands/questions/comments.html#answerlist-1",
     "title": "Question",
     "section": "Answerlist",
-    "text": "Answerlist\n\nCorrect: the line starting with # is a comment and is never evaluated, so R only prints the results of the first and third lines.\nIncorrect: the commented line is never evaluated by R, so 0 is never printed.\nIncorrect: the first line (5 + 5) is still evaluated and printed.\nIncorrect: a # simply marks the rest of the line as a comment; it doesn’t cause an error.\nIncorrect: the third line (5 * 5) is still evaluated and printed."
+    "text": "Answerlist\n\nCorrect: The lines starting with # are comment and are never evaluated, so R only prints the results of the last two lines.\nIncorrect: Commented lines are not evaluated as R code, so no output would be printed for the first two lines.\nIncorrect: Commented lines are not evaluated as R code, so no 0 would be printed.\nIncorrect: A # simply marks the rest of the line as a comment. These comments would not cause an error.\nIncorrect: Both the third and fourth lines are evaluated, so we would see two printed values."
   },
   {
     "objectID": "quizzes/basic_commands/questions/order_of_operations.html",
     "href": "quizzes/basic_commands/questions/order_of_operations.html",
     "title": "Question",
     "section": "",
-    "text": "Question\nWhat value will the following R code produce?\n(2 + 3) * 4\n\n\nSolution\nBy applying the appropriate order of operations (parentheses before multiplication/division before addition/subtraction), we get 20.\n\n\nMeta-information\nexname: Order of Operations extype: num exsolution: 20\n\n\n\n\n Back to top"
+    "text": "Question\nWhat value will the following R code produce?\n10 - 2 * 3\n\n\nSolution\nBy applying the appropriate order of operations (parentheses before multiplication/division before addition/subtraction), we get 4.\n\n\nMeta-information\nexname: Order of Operations extype: num exsolution: 4\n\n\n\n\n Back to top"
   },
   {
     "objectID": "quizzes/first_tutorial/questions/arithmetic2.html",
