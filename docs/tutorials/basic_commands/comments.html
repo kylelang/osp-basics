@@ -404,7 +404,7 @@ globalThis.qwebrCustomizedWebROptions = {
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"context":"interactive","dpi":72,"comment":"","editor-word-wrap":"true","autorun":"false","output":"true","fig-height":5,"results":"markup","warning":"true","classes":"","fig-width":7,"fig-cap":"","read-only":"false","label":"unnamed-chunk-1","out-width":"700px","editor-quick-suggestions":"false","editor-font-scale":"1","editor-max-height":"","out-height":"","message":"true"},"id":1,"code":"1:10\n2:8"},{"options":{"context":"interactive","dpi":72,"comment":"","editor-word-wrap":"true","autorun":"false","output":"true","fig-height":5,"results":"markup","warning":"true","classes":"","fig-width":7,"fig-cap":"","read-only":"false","label":"unnamed-chunk-2","out-width":"700px","editor-quick-suggestions":"false","editor-font-scale":"1","editor-max-height":"","out-height":"","message":"true"},"id":2,"code":"# 1:10\n2:8"},{"options":{"context":"interactive","dpi":72,"comment":"","editor-word-wrap":"true","autorun":"false","output":"true","fig-height":5,"results":"markup","warning":"true","classes":"","fig-width":7,"fig-cap":"","read-only":"false","label":"unnamed-chunk-3","out-width":"700px","editor-quick-suggestions":"false","editor-font-scale":"1","editor-max-height":"","out-height":"","message":"true"},"id":3,"code":"x <- matrix(rnorm(100), ncol = 4)\n\nxEigen <- eigen(x)\n\ncor(x)"},{"options":{"context":"interactive","dpi":72,"comment":"","editor-word-wrap":"true","autorun":"false","output":"true","fig-height":5,"results":"markup","warning":"true","classes":"","fig-width":7,"fig-cap":"","read-only":"false","label":"unnamed-chunk-4","out-width":"700px","editor-quick-suggestions":"false","editor-font-scale":"1","editor-max-height":"","out-height":"","message":"true"},"id":4,"code":""}];
+globalThis.qwebrCellDetails = [{"code":"1:10\n2:8","id":1,"options":{"fig-cap":"","autorun":"false","context":"interactive","warning":"true","message":"true","editor-max-height":"","fig-height":5,"output":"true","classes":"","out-height":"","editor-quick-suggestions":"false","results":"markup","comment":"","read-only":"false","dpi":72,"out-width":"700px","editor-font-scale":"1","editor-word-wrap":"true","label":"unnamed-chunk-1","fig-width":7}},{"code":"# 1:10\n2:8","id":2,"options":{"fig-cap":"","autorun":"false","context":"interactive","warning":"true","message":"true","editor-max-height":"","fig-height":5,"output":"true","classes":"","out-height":"","editor-quick-suggestions":"false","results":"markup","comment":"","read-only":"false","dpi":72,"out-width":"700px","editor-font-scale":"1","editor-word-wrap":"true","label":"unnamed-chunk-2","fig-width":7}},{"code":"x <- matrix(rnorm(100), ncol = 4)\n\nxEigen <- eigen(x)\n\ncor(x)","id":3,"options":{"fig-cap":"","autorun":"false","context":"interactive","warning":"true","message":"true","editor-max-height":"","fig-height":5,"output":"true","classes":"","out-height":"","editor-quick-suggestions":"false","results":"markup","comment":"","read-only":"false","dpi":72,"out-width":"700px","editor-font-scale":"1","editor-word-wrap":"true","label":"unnamed-chunk-3","fig-width":7}},{"code":"","id":4,"options":{"fig-cap":"","autorun":"false","context":"interactive","warning":"true","message":"true","editor-max-height":"","fig-height":5,"output":"true","classes":"","out-height":"","editor-quick-suggestions":"false","results":"markup","comment":"","read-only":"false","dpi":72,"out-width":"700px","editor-font-scale":"1","editor-word-wrap":"true","label":"unnamed-chunk-4","fig-width":7}}];
 
 </script>
 <script type="module">
@@ -1658,32 +1658,6 @@ globalThis.qwebrExecuteCode = async function (
 
 </script>
 <style>
-div.callout-common-mistakes.callout {
-  border-left-color: #B01919;
-}
-div.callout-common-mistakes.callout-style-default > .callout-header {
-  background-color: rgba(176, 25, 25, 0.13);
-}
-div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f188' !important;
-  background-image: none;
-}
-div.callout-completion-time.callout {
-  border-left-color: gray;
-}
-div.callout-completion-time.callout-style-default > .callout-header {
-  background-color: rgb(from gray r g b / 13%);
-}
-div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f2f2' !important;
-  background-image: none;
-}
 div.callout-knowledge-check.callout {
   border-left-color: #368FFF;
 }
@@ -1695,6 +1669,19 @@ div.callout-knowledge-check.callout-style-default .callout-icon::before, div.cal
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f044' !important;
+  background-image: none;
+}
+div.callout-common-mistakes.callout {
+  border-left-color: #B01919;
+}
+div.callout-common-mistakes.callout-style-default > .callout-header {
+  background-color: rgba(176, 25, 25, 0.13);
+}
+div.callout-common-mistakes .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-common-mistakes.callout-style-default .callout-icon::before, div.callout-common-mistakes.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f188' !important;
   background-image: none;
 }
 div.callout-going-further.callout {
@@ -1710,6 +1697,45 @@ div.callout-going-further.callout-style-default .callout-icon::before, div.callo
   content: '\f4d7' !important;
   background-image: none;
 }
+div.callout-reading-advanced.callout {
+  border-left-color: red;
+}
+div.callout-reading-advanced.callout-style-default > .callout-header {
+  background-color: rgb(from red r g b / 13%);
+}
+div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f518' !important;
+  background-image: none;
+}
+div.callout-completion-time.callout {
+  border-left-color: gray;
+}
+div.callout-completion-time.callout-style-default > .callout-header {
+  background-color: rgb(from gray r g b / 13%);
+}
+div.callout-completion-time .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-completion-time.callout-style-default .callout-icon::before, div.callout-completion-time.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f2f2' !important;
+  background-image: none;
+}
+div.callout-explanation.callout {
+  border-left-color: violet;
+}
+div.callout-explanation.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
+}
+div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
+  font-family: 'Font Awesome 6 Free', FontAwesome;
+  font-style: normal;
+  content: '\f075' !important;
+  background-image: none;
+}
 div.callout-practice.callout {
   border-left-color: green;
 }
@@ -1721,19 +1747,6 @@ div.callout-practice.callout-style-default .callout-icon::before, div.callout-pr
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f085' !important;
-  background-image: none;
-}
-div.callout-reading.callout {
-  border-left-color: violet;
-}
-div.callout-reading.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f518' !important;
   background-image: none;
 }
 div.callout-resource.callout {
@@ -1749,30 +1762,17 @@ div.callout-resource.callout-style-default .callout-icon::before, div.callout-re
   content: '\f0c1' !important;
   background-image: none;
 }
-div.callout-reading-advanced.callout {
-  border-left-color: red;
+div.callout-reading.callout {
+  border-left-color: violet;
 }
-div.callout-reading-advanced.callout-style-default > .callout-header {
-  background-color: rgb(from red r g b / 13%);
+div.callout-reading.callout-style-default > .callout-header {
+  background-color: rgb(from violet r g b / 13%);
 }
-div.callout-reading-advanced .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-reading-advanced.callout-style-default .callout-icon::before, div.callout-reading-advanced.callout-titled .callout-icon::before {
+div.callout-reading .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
+div.callout-reading.callout-style-default .callout-icon::before, div.callout-reading.callout-titled .callout-icon::before {
   font-family: 'Font Awesome 6 Free', FontAwesome;
   font-style: normal;
   content: '\f518' !important;
-  background-image: none;
-}
-div.callout-explanation.callout {
-  border-left-color: violet;
-}
-div.callout-explanation.callout-style-default > .callout-header {
-  background-color: rgb(from violet r g b / 13%);
-}
-div.callout-explanation .callout-toggle::before {  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="rgb(33, 37, 41)" class="bi bi-chevron-down" viewbox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"></path></svg>');}
-div.callout-explanation.callout-style-default .callout-icon::before, div.callout-explanation.callout-titled .callout-icon::before {
-  font-family: 'Font Awesome 6 Free', FontAwesome;
-  font-style: normal;
-  content: '\f075' !important;
   background-image: none;
 }
 </style>
